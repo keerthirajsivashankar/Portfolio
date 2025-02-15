@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+}
+
+/* Main background content */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.back-video {
+    position: fixed; /* Ensures it stays fixed in the background */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    z-index: -1;
+}
+
+
+.cover {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(82, 107, 216, 0.18);
+}
+
+/* Header */
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.121);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(114, 161, 222, 0.6);
+    z-index: 999;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.left img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.left h2 {
+    font-weight: bold;
+}
+
+header ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 15px 15px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 69, 0.326);
+    box-shadow: 0 0 10px rgba(114, 161, 222, 0.4);
+    backdrop-filter: blur(10px);
+}
+header ul li{
+    list-style: none;
+}
+header ul a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700px;
+    transition: 0.3s;
+    margin: 0 10px;
+
+}
+header ul a:hover{
+    text-shadow: 0 0 15px black;
+}
+.box-icons{
+    display: flex;
+    gap: 40px;
+}
+.box-icons p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #72a1de;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.box-icons p:hover{
+    background-color: #72a1de;
+    color: black;
+    box-shadow: 0 0 15px #72a1de;
+}
+.blackhole{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: -1;
+    mix-blend-mode: lighten;
+}
+.blackhole video{
+    width: 100%;
+    margin-top: -23.5%;
+}
+/*Hero*/
+.hero{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-info{
+    position: absolute;
+    left: 5%;
+}
+.hero-info div{
+    color: #72a1de;
+    padding: 8px 5px;
+    border-radius: 50px;
+    border: 1px solid #72a1de94;
+    width: 280px;
+    background-color: #2200493d;
+    box-shadow: 0  0 5px #72a1de84;
+}
+.hero-info h1{
+    font-size: 60px;
+    max-width: 600px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.hero-info p{
+    max-width: 550px;
+    line-height: 25px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.hero-info button{
+    color: white;
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: 1px solid #72a1de81;
+    background-color: #2200493d;
+    box-shadow: 0  0 5px #72a1de81;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero-info button:hover{
+    box-shadow: 0  0 15px #72a1de81;
+}
+/*Gradient animation*/
+.gradient{
+    background: linear-gradient(to right,#008baa,#7e42a7,#6600c5,#6070fd,#0099ff,#008bad);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient{
+    to{
+        background-position: 200% ;
+    }
+}
+.hero-vid-box{
+    position: absolute;
+    right: 3%;
+    mix-blend-mode: lighten;
+}
+.hero-vid-box video{
+    height: 800px;
+    mix-blend-mode: lighten;
+}
+/*about me*/
+.about{
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10px; 
+   width: 90%;
+   margin-bottom: 10%;
+}
+.info-card{
+    display: flex;
+    align-items: center;
+    max-width: 120px;
+}
+.info-card h1{
+    background: linear-gradient(to right,#008baa,#7e42a7,#6600c5,#6070fd,#0099ff,#008bad);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    font-size: 45px;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.info-card p{
+    color: white;
+    font-size: 20px;
+}
+/*Footer*/
+.footer{
+    height: 100px;
+    background-color: white;
+    position: relative;
+    bottom: 0;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    header ul {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width : 1000px) {
+    .container{
+        height: 100vh;
+    }
+    .blackhole video{
+        margin-top: -20%;
+    }
+    .hero-info h1{
+        font-size: 40px;
+        max-width: 40px;
+    }
+    .hero-info p{
+        max-width: 300px;
+    }
+    .hero img{
+        height: 300px;
+    }
+    .about{
+        padding: 10px;
+        width: 90%;
+    }
+    .info-card h1{
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width:700px) {
+    .hero{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+    }
+    .hero-info{
+        position: relative;
+        left: 5%;
+        margin: 10px;
+
+    }
+    .hero-vid-box{
+        position: relative;
+        right: 3%;
+    }
+    .hero-vid-box video{
+        height: 600px;
+        mix-blend-mode: lighten ;
+    }
+    .hero-info h1{
+        font-size: 60px;
+        max-width: 80%;
+        font-weight: 700;
+        line-height: 60px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .hero-info p{
+        max-width: 70%;
+        line-height: 25px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .hero-info button{
+        margin-top: 10px;
+        color: white;
+        padding: 15px 15px;
+        border-radius: 10px;
+        border: 1px solid #72a1de81;
+        background-color: #2200493d;
+        box-shadow: 0  0 5px #72a1de81;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .hero-info button:hover{
+        box-shadow: 0  0 15px #72a1de81;
+    }
+    .back-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    header ul{
+        display: none;
+    }
+    .blackhole video{
+        margin-top: -11%;
+    }
+    .about{
+        width: 80%;
+        flex-wrap: wrap;
+    }
+
+    .hero-info{
+        bottom: 10px;
+        top: 300px;
+        width: 100%;
+    }
+    .hero img{
+        height: 200px;
+        right: 100px;
+        top: 70px;
+    }
+    .container{
+        height: 100vmax;
+    }
+    .hero-info {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .hero-info h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .hero-info p {
+        font-size: 18px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Make the About section stack items in a column */
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .info-card {
+        max-width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
