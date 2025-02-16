@@ -10,7 +10,10 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-
+    z-index: 22;
+    display: flex;
+    flex-direction: column;
+    background-color: #001f7c38;
 }
 
 .back-video {
@@ -21,6 +24,7 @@ body {
     height: 100vh;
     object-fit: cover; /* Ensures the video covers the entire screen */
     z-index: -1;
+    mix-blend-mode: lighten;
 }
 
 
@@ -122,7 +126,7 @@ header ul a:hover{
     position: relative;
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 120vh;
     align-items: center;
     justify-content: space-between;
 }
@@ -189,13 +193,178 @@ header ul a:hover{
     height: 800px;
     mix-blend-mode: lighten;
 }
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid lightgray;
+    position: absolute;
+    left: 49%;
+    bottom: 8%;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.477);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    transform: translate(-50%, -100%) rotate(45deg);
+    animation: scrolldown 2s ease-in-out infinite;
+}
+
+.scroll-down::before {
+    top: 35%;
+    animation-delay: 0.5s;
+}
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+    }
+    30%, 60% {
+        opacity: 1;
+    }
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
+}
+/*Info - section*/
+
 /*about me*/
-.about{
-   display: flex;
-   justify-content: space-between;
-   padding: 0 10px; 
+.info-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 10%;
+}
+.section-title1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+.section-title{
+    font-size: 40px;
+    font-weight: 700;
+}
+.info-cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+.card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    background-color: #080020b7;
+    border: 1px solid gray;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.card img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.card h1{
+   position: absolute;
+   margin: 0;
+   bottom: 40%;
+   left: 5%; 
+   font-size: 25px;
+   z-index: 1;
+   color: lightgray;
+}
+.card p{
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: gray;
+    font-size: 13px;
+    line-height: 20px;
+}
+.card video{
+    margin-top: 10%;
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+}
+.card button{
+    margin-top: 10px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #72a1de81;
+    background-color: #2200493d;
+    box-shadow: 0  0 5px #72a1de81;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+
+}
+.card button:hover{
+    box-shadow: 0 0 15px #72a1de86;
+    opacity: 0.7;
+}
+.card:hover{
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.5);
+}
+.card:nth-child(2) img{
+    margin-top: 10px;
+    height: 37%;
+    width: 37%;
+}
+.card:nth-child(3){
+    grid-row: span 2;
+    height: 83vh;
+}
+.card:nth-child(3) p{
+    bottom: 12%;
+}
+.card:nth-child(3) h1{
+    bottom: 21%;
+}
+.card:nth-child(4){
+    grid-column: span 2;
+}
+.card:nth-child(4) p{
+    max-width: 650px;
+}
+.card:nth-child(4) h1{
+   bottom: 35%; 
+}
+.expe{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px; 
    width: 90%;
-   margin-bottom: 10%;
+   left: 0;
+
 }
 .info-card{
     display: flex;
@@ -216,14 +385,118 @@ header ul a:hover{
 }
 .info-card p{
     color: white;
-    font-size: 20px;
+    font-size: 20px;
 }
-/*Footer*/
-.footer{
-    height: 100px;
-    background-color: white;
+/*SKILLS*/
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120vh;
+}
+.circle-menu {
     position: relative;
-    bottom: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.skill {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #00adb5;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.skill:hover {
+    background: gray;
+    transform: translate(-50%, -50%) ;
+}
+
+.skill i {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.skill span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.center-skill {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: white;
+    color: #00adb5;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 10px;
+}
+
+.center-skill span {
+    font-size: 16px;
+    color: #1a1a2e;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.description {
+    font-size: 12px;
+    color: gray;
+    font-weight: normal;
+    margin-top: 5px;
+    text-align: center;
+    width: 90%;
+}
+/*Projects*/
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+}
+.pro-card{
+    width: 96%;
+    height: 20%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+}
+.pro-card video{
+    width: 45%;
+    border: 1px solid gray;
+    margin: 2%;
+    border-radius: 16px;
+}
+.pro-det{
+    width: 45%;
+    border: 1px solid gray;
+    margin: 2%;
+    border-radius: 16px;
 }
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
@@ -283,7 +556,7 @@ header ul a:hover{
         margin-top: 10px;
         display: flex;
         flex-direction: column;
-        height: 800px;
+        height: 1000px;
     }
     .hero-info{
         position: relative;
