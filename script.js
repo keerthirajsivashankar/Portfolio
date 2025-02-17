@@ -1,36 +1,82 @@
-const skills = [
-    { name: "HTML", icon: "fab fa-html5", desc: "The backbone of web pages." },
-    { name: "CSS", icon: "fab fa-css3-alt", desc: "Styles and designs websites." },
-    { name: "Bootstrap", icon: "fab fa-bootstrap", desc: "A framework for responsive design." },
-    { name: "JavaScript", icon: "fab fa-js", desc: "Brings interactivity to web pages." },
-    { name: "React", icon: "fab fa-react", desc: "Builds dynamic web applications." },
-    { name: "Python", icon: "fab fa-python", desc: "A versatile programming language." },
-    { name: "Git", icon: "fab fa-git-alt", desc: "Version control for projects." },
-    { name: "Canva", icon: "fas fa-paint-brush", desc: "Design tool for creatives." },
-    { name: "MySQL", icon: "fas fa-database", desc: "Manages and stores data." }
-];
+const skills = document.querySelectorAll('.skill');
+const descriptionElement = document.querySelector('.skill-description');
+const skillTextElement = document.getElementById('skill-text');
 
-const menu = document.querySelector('.circle-menu');
-const centerSkill = document.getElementById('center-skill');
-const radius = 220; // Increased spacing
+const skillDescriptions = {
+  'HTML': 'HTML (HyperText Markup Language) is the standard language for creating and structuring web pages.',
+  'CSS': 'CSS (Cascading Style Sheets) is used for styling web pages and making them visually appealing.',
+  'JS': 'JavaScript is a versatile programming language used for web development, enabling dynamic content on websites.',
+  'Git': 'Git is a version control system used to track changes in source code during software development.',
+  'MySQL': 'MySQL is an open-source relational database management system, commonly used with web applications.',
+  'Python': 'Python is a high-level programming language known for its readability and versatility in various domains.',
+  'Canva': 'Canva is a graphic design tool used for creating visuals like social media graphics, presentations, and more.',
+  'React JS': 'React is a JavaScript library for building user interfaces, mainly for single-page applications.'
+};
+
+const skillColors = {
+  'HTML': '#e34c26',
+  'CSS': '#2965f1',
+  'JS': '#f7df1e',
+  'Git': '#f1502f',
+  'MySQL': '#4479a1',
+  'Python': '#306998',
+  'Canva': '#00C4CC',
+  'React JS': '#61dafb'
+};
+
+const skillIcons = {
+  'HTML': 'fab fa-html5',
+  'CSS': 'fab fa-css3-alt',
+  'JS': 'fab fa-js-square',
+  'Git': 'fab fa-git',
+  'MySQL': 'fas fa-database',
+  'Python': 'fab fa-python',
+  'Canva': 'fas fa-paint-brush',
+  'React JS': 'fab fa-react'
+};
+
+// Fix skills in a circle without rotation
+const radius = 250;
+const angleStep = 360 / skills.length;
 
 skills.forEach((skill, index) => {
-    const angle = (index / skills.length) * (2 * Math.PI);
-    const x = radius * Math.cos(angle) + 250; 
-    const y = radius * Math.sin(angle) + 250;
+  const skillName = skill.dataset.skill;
 
-    const div = document.createElement("div");
-    div.className = "skill";
-    div.style.left = `${x}px`;
-    div.style.top = `${y}px`;
-    div.innerHTML = `<i class="${skill.icon}"></i><span>${skill.name}</span>`;
-    div.dataset.skill = skill.name;
-    div.dataset.icon = skill.icon;
-    div.dataset.desc = skill.desc;
+  // Calculate position based on circle
+  const angle = angleStep * index;
+  const x = radius * Math.cos(angle * (Math.PI / 180));
+  const y = radius * Math.sin(angle * (Math.PI / 180));
 
-    div.addEventListener("click", function() {
-        centerSkill.innerHTML = `<i class="${skill.icon}"></i><span>${skill.name}</span><p class="description">${skill.desc}</p>`;
-    });
+  // Apply position to the skills
+  skill.style.transform = `translate(${x}px, ${y}px)`;
 
-    menu.appendChild(div);
+  // Ensure skill stays upright by rotating back the inverse of the angle
+  skill.style.transform += ` rotate(${angle}deg)`;
+
+  // Set the background color and icon
+  skill.style.backgroundColor = skillColors[skillName];
+  skill.innerHTML = `<i class="${skillIcons[skillName]}"></i><span>${skillName}</span>`;
+
+  skill.addEventListener('click', () => {
+    // Update the skill description
+    const iconClass = skillIcons[skillName];
+    const description = skillDescriptions[skillName];
+    
+    skillTextElement.innerHTML = `
+      <i class="${iconClass}"></i>
+      <h3>${skillName}</h3>
+      <p>${description}</p>
+    `;
+
+    // Show the description section
+    descriptionElement.classList.add('active');
+  });
+});
+
+// Optional: Hide the description when clicking outside the carousel
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.carousel')) {
+    descriptionElement.classList.remove('active');
+  }
+  AOS.refresh();
 });
