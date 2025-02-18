@@ -33,8 +33,8 @@
             <li><a href="#practices">Practices</a></li>
         </ul>
         <div class="box-icons">
-            <p><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"><a href="" target="_blank"></a></i></p>
-            <p><i class="fa-brands fa-github" style="color: #ffffff;"><a href="" target="_blank"></a></i></p>
+            <p><a href="https://www.linkedin.com/in/keerthi-raj-s-74a8a824b/" target="_blank"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></p>
+            <p><a href="https://github.com/keerthirajsivashankar" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a></p>              
             <p><i class="fa-solid fa-m" style="color: #ffffff;"><a href="" target="_blank"></a></i></p>
         </div>
     </header>
@@ -43,7 +43,7 @@
     </div>
     <!--Header end-->
     <section class="hero">
-        <div class="hero-info" data-aos="fade-right" data-aos-duration="1000">
+        <div class="hero-info autoblur" data-aos="fade-right" data-aos-duration="1000">
             <div class="title">
                 <i class="fa-brands fa-sketch" style="color: #ffffff;"></i>
                 Aspiring Full-stack Web Developer
@@ -53,7 +53,7 @@
             <button><i class="fa-solid fa-paper-plane" style="color: #ffffff;"> Contact me</i></button>
         </div>
         <div class="hero-vid-box" data-aos="fade-left" data-aos-duration="1000">
-            <video src="hero-video.mp4" autoplay loop muted play-inline></video>
+            <video class="autoblur"  src="hero-video.mp4" autoplay loop muted play-inline></video>
         </div>
         <div  data-aos-duration="1000" data-aos="fade-up" class="scroll-down">    
         </div>
@@ -106,17 +106,20 @@
         </div>
     </section>
     <section class="skills1" id = "skills">
-        <h1 class="section-title1" data-aos="fade-down" data-aos-duration="1000">SKILLS</h1>
+        <h1 class="section-title1" data-aos="fade-up" data-aos-duration="1000">SKILLS</h1>
+        <div class="brainskills">
+            
+        </div>
         <div class="container1"  data-aos="fade-down" data-aos-duration="1000">
             <div class="carousel" data-aos-duration="1000" data-aos="fade-up-right">
               <div class="skills">
-                <div class="skill" data-skill="HTML">HTML</div>
-                <div class="skill" data-skill="CSS">CSS</div>
-                <div class="skill" data-skill="JS">JS</div>
-                <div class="skill" data-skill="Git">Git</div>
                 <div class="skill" data-skill="MySQL">MySQL</div>
+                <div class="skill" data-skill="HTML">HTML</div>
+                <div class="skill" data-skill="JS">JS</div>
                 <div class="skill" data-skill="Python">Python</div>
+                <div class="skill" data-skill="CSS">CSS</div>
                 <div class="skill" data-skill="Canva">Canva</div>
+                <div class="skill" data-skill="Git">Git</div>
                 <div class="skill" data-skill="React JS">React JS</div>
               </div>
             </div>
@@ -125,66 +128,76 @@
               </div>              
           </div>
     </section>
-    <section class="project" id="projects" >
-        <h1 class="section-title1" data-aos="fade-down" data-aos-duration="1000">Projects</h1>
-        <div class="pro-card">
-            <video src="" data-aos="zoom-out-left" data-aos-duration="1000"></video>
-            <div class="pro-det" data-aos="zoom-out-right"  data-aos-duration="1000">
-                <h1>Title</h1>
-                <div class="pro-des">
-                    <p></p>
-                    <button></button>
-                </div>
-            </div>
+    <section class="my-projects" id="projects" >
+       <h1 class="section-title1" data-aos="fade-up" data-aos-duration="1000">My Projects 👨🏽‍💻</h1>
+       <div class="project-card">
+        <div class="project-vidbox autoblur">
+            <video id="provid1" src="DD.mp4"></video>
+            <div class="hover-sign"></div>
         </div>
-        <div class="pro-card">
-            <video src="" data-aos="zoom-out-left" data-aos-duration="1000"></video>
-            <div class="pro-det" data-aos="zoom-out-right" data-aos-duration="1000">
-                <h1>Title</h1>
-                <div class="pro-des">
-                    <p></p>
-                    <button></button>
-                </div>
-            </div>
+        <div class="project-info fadeinright">
+            <h1>Fake <span class="gradient">ID Detection</span> using <span class="gradient">RFA</span></h1>
+            <p>A web-based application that detects fraudulent IDs 
+                using a hybrid approach combining Rule-Based Filtering
+                 and Machine Learning (Random Forest). 
+            </p>
+            <div class="pro-tech"><i class="fa-brands fa-python" style="color: #ffffff;"></i> <i class="fa-brands fa-react" style="color: #ffffff;"></i></div>
+            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
         </div>
-        <div class="pro-card">
-            <video src="" data-aos="zoom-out-left" data-aos-duration="1000"></video>
-            <div class="pro-det" data-aos="zoom-out-right" data-aos-duration="1000">
-                <h1>Title</h1>
-                <div class="pro-des">
-                    <p></p>
-                    <button></button>
-                </div>
-            </div>
+    </div>
+    <div class="project-card">
+        <div class="project-vidbox autoblur">
+            <video  id="provid2" src="FIDD.mp4"></video>
         </div>
-        <div class="pro-card">
-            <video src="" data-aos="zoom-out-left" data-aos-duration="1000"></video>
-            <div class="pro-det" data-aos="zoom-out-right" data-aos-duration="1000">
-                <h1>Title</h1>
-                <div class="pro-des">
-                    <p></p>
-                    <button></button>
-                </div>
-            </div>
+        <div class="project-info fadeinright">
+            <h1>Fraudulent <span class="gradient">Transaction</span> Detection by <span class="gradient">IFA</span></h1>
+            <p>The Fraudulent Transaction Detection System uses Isolation Forest and Rule-Based Filtering to detect suspicious transactions and ensure real-time fraud detection with Flask and Machine Learning.</p>
+            <div class="pro-tech"><i class="fa-brands fa-python" style="color: #ffffff;"></i> <i class="fa-brands fa-react" style="color: #ffffff;"></i></div>
+            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+         </div>
+    </div>
+    <div class="project-card">
+        <div class="project-vidbox autoblur">
+            <video  id="provid3" src="Datalysis.mp4"></video>
         </div>
-        <div class="pro-card">
-            <video src="" data-aos="zoom-out-left" data-aos-duration="1000"></video>
-            <div class="pro-det" data-aos="zoom-out-right" data-aos-duration="1000">
-                <h1>Title</h1>
-                <div class="pro-des">
-                    <p></p>
-                    <button></button>
-                </div>
-            </div>
+        <div class="project-info fadeinright">
+            <h1><span class="gradient">DATALYSIS</span></h1>
+            <p>The Data Analysis project focuses on visualizing and analyzing data through interactive charts and graphs, using HTML, CSS, and JavaScript to handle and display datasets like CSV files.</p>
+            <div class="pro-tech"><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
+            <button class="btn"><i class="fa-brands fa-square-js" style="color: #ffffff;"></i><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
         </div>
+    </div>
+    <div class="project-card">
+        <div class="project-vidbox autoblur">
+            <video  id="provid4" src="driveassit.mp4"></video>
+        </div>
+        <div class="project-info fadeinright">
+            <h1><span class="gradient">DRIVEASSIT</span></h1>
+            <p>The Drive Assist project is a centralized system designed for efficient trip planning, FastTag management, and several other useful features for drivers.</p>
+            <div class="pro-tech"><i class="fa-brands fa-bootstrap" style="color: #ffffff;"></i><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
+            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-vidbox autoblur">
+            <video  id="provid5" src="DBMS.mp4"></video>
+        </div>
+        <div class="project-info fadeinright">
+            <h1>Resource <span class="gradient">Management</span> System</h1>
+            <p>The DBMS project is a resource management system for department resources, developed using HTML, CSS, JavaScript, and Bootstrap for the frontend.
+            </p>
+            <div class="pro-tech"><i class="fa-brands fa-bootstrap" style="color: #ffffff;"></i><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
+            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+        </div>
+    </div>
     </section>
     <section class="experience" id="experience">
-
+        
     </section>
     <section class="practices" id="practices"></section>
     <section class="footer">
-        <footer style="text-align: center; padding: 10px; background: #1a1a2e; color: white; font-size: 14px;">
-            © 2025 Keerthi Raj S | Aspiring Full Stack Web Developer | Pursuing B.Tech IT at SRM IST Ramapuram
+        <footer style="text-align: center; padding: 10px; background: #1a1a2e; color: white; font-size: 14px; height: 30px;">
+            <h3>© 2025 Keerthi Raj S | Aspiring Full Stack Web Developer | Pursuing B.Tech IT at SRM IST Ramapuram</h3>
         </footer>        
     </section>
   </div>

@@ -28,7 +28,7 @@ const skillIcons = {
   'HTML': 'fab fa-html5',
   'CSS': 'fab fa-css3-alt',
   'JS': 'fab fa-js-square',
-  'Git': 'fab fa-git',
+  'Git': 'fa-brands fa-git-alt',
   'MySQL': 'fas fa-database',
   'Python': 'fab fa-python',
   'Canva': 'fas fa-paint-brush',
@@ -79,4 +79,22 @@ document.addEventListener('click', (e) => {
     descriptionElement.classList.remove('active');
   }
   AOS.refresh();
+});
+// video
+const v1 = document.getElementById('provid1') ;
+const v2 = document.getElementById('provid2') ;
+const v3 = document.getElementById('provid3') ;
+const v4 = document.getElementById('provid4') ;
+const v5 = document.getElementById('provid5') ;
+const h = document.querySelector(".hover-sign");
+const vlist = [v1,v2,v3,v4,v5];
+vlist.forEach(function(video){
+  video.addEventListener('mouseover',function(){
+    video.play()
+    h.classList.add("active")
+  })
+  video.addEventListener('mouseout',function(){
+    video.pause()
+    h.classList.remove("active")
+  })
 });
