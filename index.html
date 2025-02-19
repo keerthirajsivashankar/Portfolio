@@ -105,44 +105,52 @@
             </div>
         </div>
     </section>
-    <section class="skills1" id = "skills">
-        <h1 class="section-title1" data-aos="fade-up" data-aos-duration="1000">SKILLS</h1>
-        <div class="brainskills">
-            <div class="dev">
-                <h1><Span class="gradient">Developer</Span></h1>
-                <p>I specialize in full-stack web development, proficient in technologies like React, 
-                     MySQL, and Flask. With a strong focus on clean, efficient coding practices,
-                      I aim to solve complex problems and build robust applications.
+    <section class="skill-section" id = "skills">
+        <h1 class="section-title">My Skills 💪</h1>
+        <div class="skills-box">
+            <img class="skills-img" src="digital brain.png" alt="">
+            <div class="designer">
+                <h1 class="gradient">Designer <i class="fa-solid fa-laptop" style="color: #ffffff;"></i></h1>
+                <p>I'm a Designer, crafting sleek 
+                    and interactive web interfaces with 
+                    HTML, CSS, and JavaScript. 
+                    I also use Canva Magic to create 
+                    stunning visuals effortlessly!. My strenght lies in 
+                    blending asthetics with functionality to create seamless user experience.
                 </p>
             </div>
-            <div class="devvidbox">
-                <img src="digital brain.png" alt="">
-            </div>
-            <div class="dev">
-                <h1><Span class="gradient">Designer</Span></h1>
-                <p>I have a strong passion for designing visually engaging and user-friendly websites.
-                    Using HTML, CSS, JavaScript, and Bootstrap, I ensure that my designs are responsive . 
-                    I integrate smooth animations and transitions to enhance the user experience.
+            <div class="coder">
+                <h1 class="gradient">Coder <i class="fa-solid fa-code" style="color: #ffffff;"></i></h1>
+                <p>
+                    I'm a Code Ninja, building seamless 
+                    and efficient web apps with Python, 
+                    Django, and JavaScript. I also have experience
+                    with database management system using MongoDB
+                    and MySQL. 
+                    I write Logic Magic, turning ideas into reality with clean and optimized code!
                 </p>
             </div>
+            <div class="slider" style="--width:100px; --height:100px; --quantity:7;">
+                <div class="list">
+                    <div class="item"><img src="1.jpg" alt="1"></div>
+                    <div class="item"><img src="2.jpg" alt="2"></div>
+                    <div class="item"><img src="3.jpg" alt="3"></div>
+                    <div class="item"><img src="4.jpg" alt="4"></div>
+                    <div class="item"><img src="5.jpg" alt="5"></div>
+                    <div class="item"><img src="6.jpg" alt="6"></div>
+                    <div class="item"><img src="7.jpg" alt="7"></div>
+                     <!-- Duplicate Images for Seamless Loop -->
+                    <div class="item"><img src="1.jpg" alt="1"></div>
+                    <div class="item"><img src="2.jpg" alt="2"></div>
+                    <div class="item"><img src="3.jpg" alt="3"></div>
+                    <div class="item"><img src="4.jpg" alt="4"></div>
+                    <div class="item"><img src="5.jpg" alt="5"></div>
+                    <div class="item"><img src="6.jpg" alt="6"></div>
+                    <div class="item"><img src="7.jpg" alt="7"></div>
+                </div>
+            </div>
+            
         </div>
-        <div class="container1"  data-aos="fade-down" data-aos-duration="1000">
-            <div class="carousel" data-aos-duration="1000" data-aos="fade-up-right">
-              <div class="skills">
-                <div class="skill" data-skill="MySQL">MySQL</div>
-                <div class="skill" data-skill="HTML">HTML</div>
-                <div class="skill" data-skill="JS">JS</div>
-                <div class="skill" data-skill="Python">Python</div>
-                <div class="skill" data-skill="CSS">CSS</div>
-                <div class="skill" data-skill="Canva">Canva</div>
-                <div class="skill" data-skill="Git">Git</div>
-                <div class="skill" data-skill="React JS">React JS</div>
-              </div>
-            </div>
-            <div class="skill-description" id="description" data-aos="fade-up-left" data-aos-duration="1000">
-                <p id="skill-text">Select a skill to see details.</p>
-              </div>              
-          </div>
     </section>
     <section class="my-projects" id="projects" >
        <h1 class="section-title1" data-aos="fade-up" data-aos-duration="1000">My Projects 👨🏽‍💻</h1>
@@ -154,8 +162,8 @@
         <div class="project-info fadeinright">
             <h1><span class="gradient">DATALYSIS</span></h1>
             <p>The Data Analysis project focuses on visualizing and analyzing data through interactive charts and graphs, using HTML, CSS, and JavaScript to handle and display datasets like CSV files.</p>
-            <div class="pro-tech"><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
-            <button class="btn"><i class="fa-brands fa-square-js" style="color: #ffffff;"></i><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+            <div class="pro-tech"><i class="fa-brands fa-square-js" style="color: #ffffff;"></i><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
+            <button class="btn"><a href="https://github.com/keerthirajsivashankar/DataAnalysis" target="_blank"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</a></button>                 
         </div>
     </div>
     <div class="project-card">
@@ -169,7 +177,7 @@
                  and Machine Learning (Random Forest). 
             </p>
             <div class="pro-tech"><i class="fa-brands fa-python" style="color: #ffffff;"></i> <i class="fa-brands fa-react" style="color: #ffffff;"></i></div>
-            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+            <button class="btn"><a href="https://github.com/keerthirajsivashankar/Fake_ID_Detection" target="_blank"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</a></button>               
         </div>
     </div>
     <div class="project-card">
@@ -180,7 +188,7 @@
             <h1><span class="gradient">DRIVEASSIT</span></h1>
             <p>The Drive Assist project is a centralized system designed for efficient trip planning, FastTag management, and several other useful features for drivers.</p>
             <div class="pro-tech"><i class="fa-brands fa-bootstrap" style="color: #ffffff;"></i><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
-            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+            <button class="btn"><a href="https://github.com/keerthirajsivashankar/DriveAssit" target="_blank"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</a></button>               
         </div>
     </div>
     <div class="project-card">
@@ -192,7 +200,7 @@
             <p>The DBMS project is a resource management system for department resources, developed using HTML, CSS, JavaScript, and Bootstrap for the frontend.
             </p>
             <div class="pro-tech"><i class="fa-brands fa-bootstrap" style="color: #ffffff;"></i><i class="fa-brands fa-css3-alt" style="color: #ffffff;"></i><i class="fa-brands fa-html5" style="color: #ffffff;"></i></div>
-            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+            <button class="btn"><a href="https://github.com/keerthirajsivashankar/dbms" target="_blank"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</a></button>                 
         </div>
     </div>
     <div class="project-card">
@@ -203,7 +211,7 @@
             <h1>Fraudulent <span class="gradient">Transaction</span> Detection by <span class="gradient">IFA</span></h1>
             <p>The Fraudulent Transaction Detection System uses Isolation Forest and Rule-Based Filtering to detect suspicious transactions and ensure real-time fraud detection with Flask and Machine Learning.</p>
             <div class="pro-tech"><i class="fa-brands fa-python" style="color: #ffffff;"></i> <i class="fa-brands fa-react" style="color: #ffffff;"></i></div>
-            <button class="btn"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</button>                 
+            <button class="btn"><a href="https://github.com/keerthirajsivashankar/Data-Detective" target="_blank"><i class="fa-solid fa-link" style="color: #ffffff;"></i> Github</a></button>                
          </div>
     </div>
     </section>
