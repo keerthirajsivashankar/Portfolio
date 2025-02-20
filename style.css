@@ -832,3 +832,180 @@ header ul a:hover{
         margin-bottom: 20px;
     }
 }
+.footer {
+    background: rgba(0, 0, 0, 0.8); /* Subtle dark background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+/*xperience*/
+.experience-section {
+    padding: 50px 10%;
+    text-align: center;
+    height: 800px;
+}
+
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    height: 500px;
+    perspective: 1000px; /* Creates 3D effect */
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Light transparent white */
+    color: white; /* White text */
+    padding: 20px;
+    border-left: 4px solid lightgray; /* Light gray border */
+    margin-bottom: -5%; /* Overlapping effect */
+    transition: transform 0.5s ease-in-out 0.2s, 
+                box-shadow 0.3s ease-in-out 0.2s, 
+                background 0.3s ease-in-out; /* Smooth background transition */
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: rotateX(10deg) translateY(10px);
+    transform-origin: top;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.timeline-item:hover {
+    transform: rotateX(0deg) translateY(0px) scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.3); /* Light gray on hover */
+}
+
+.timeline-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    transform: rotateY(10deg);
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.timeline-content {
+    text-align: left;
+    transform: rotateX(5deg);
+}
+
+.timeline-content h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+/*practices*/
+.practices-grid {
+    text-align: center;
+    background: transparent;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 🔥 2x2 Grid Layout */
+.grid-container {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 15%;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 500px; /* Fixed height */
+}
+
+/* Center "+" Lines */
+.vertical-line, .horizontal-line {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.vertical-line {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.horizontal-line {
+    height: 3px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* 🔥 Grid Items */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background: transparent;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  margin:5%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔥 Hover Effect - Image Grows */
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+.grid-item:hover img {
+    transform: scale(1.2);
+}
+
+/* 🔥 Overlay for Platform Name */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 212, 255, 0.8);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* 🔥 Show Platform Name on Hover */
+.grid-item:hover .overlay {
+    height: 50px;
+    opacity: 1;
+}
