@@ -388,7 +388,8 @@ header ul a:hover{
 }
 .info-card p{
     color: white;
-    font-size: 20px;
+    font-size: 50px;
+    font-weight: bolder;
 }
 /*SKILLS*/
 .skill-section {
