@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="portfolio.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style-mobile.css" />
+
+    <!--Aos-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>KeerthiRaj</title>
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="navbar">
+      <!-- Logo -->
+      <h1 class="logo" data-aos="fade-right" data-aos-duration="1000">
+        S.Keerthi Raj
+      </h1>
+      <!-- Hamburger -->
+      <div id="hamburger" class="hamburger" data-aos="fade-left">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
+        <h4><a href="#landing">Home</a></h4>
+        <h4><a href="#aboutme">About</a></h4>
+        <h4><a href="#skills">Skills</a></h4>
+        <h4><a href="#projects">Projects</a></h4>
+        <h4><a href="#experience">Experience</a></h4>
+        <h4><a href="#certification">Certifications</a></h4>
+        <h4><a href="#contact" class="btn">Contact</a></h4>
+      </nav>
+    </header>
+    <!--Main-->
+    <section>
+      <div id="landing" class="landing">
+        <div class="text" data-aos="fade-down" data-aos-duration="1000">
+          <h1 class="text1">Hello<span> .</span></h1>
+
+          <div class="text2">
+            <span class="name-bar"></span> I'm Keerthi Raj
+          </div>
+
+          <p id="typed-text" class="subline"></p>
+          <p class="hero-description">
+            I'm a Frontend Developer Creating Tomorrow's Web Today . who is
+            passionate about learning and extend
+          </p>
+
+          <div class="hero-buttons">
+            <a href="KEERTHI RAJ S_Doc.pdf" download class="btn"
+              >📄 Download Resume</a
+            >
+            <a
+              href="https://github.com/keerthirajsivashankar"
+              target="_blank"
+              class="btn secondary"
+              >💻 GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="image" data-aos="fade-left" data-aos-duration="1000">
+          <spline-viewer
+            class="spline"
+            loading-anim-type="spinner-small-dark"
+            url="https://prod.spline.design/lq24wmqhSaO-JclC/scene.splinecode"
+          ></spline-viewer>
+          <spline-viewer
+            class="spline-m"
+            url="https://prod.spline.design/FsEvB1JV3pG6F9n1/scene.splinecode"
+            ><img
+              src="data:image/png;base64,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"
+              alt="Spline preview"
+          /></spline-viewer>
+        </div>
+      </div>
+      <div id="aboutme" class="aboutme">
+        <div class="expe">
+          <div class="info-card" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>2+</h1>
+            <p>Years of Development</p>
+          </div>
+          <div class="info-card" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>6+</h1>
+            <p>Technical Skills</p>
+          </div>
+          <div class="info-card" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>4+</h1>
+            <p>Projects</p>
+          </div>
+          <div class="info-card" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>10+</h1>
+            <p>Certifications</p>
+          </div>
+        </div>
+        <!--about me-->
+        <div id="aboutme" class="aboutme-section">
+          <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            About Me
+          </h2>
+          <div class="aboutme-grid">
+            <!-- 🖼️ Left: Image + Stats -->
+            <div class="aboutme-left">
+              <img
+                src="hero.png"
+                alt="Keerthi Raj"
+                class="aboutme-img"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </div>
+
+            <!-- 🧠 Right: About + Timeline -->
+            <div
+              class="aboutme-right"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <p
+                class="aboutme-text"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                I’m <strong>Keerthi Raj</strong>, a frontend developer with a
+                strong foundation in React.js, JavaScript, and Python. I’m
+                passionate about crafting performant UIs, solving problems, and
+                building real-world applications that make an impact. Currently
+                pursuing my B.Tech in Information Technology at SRM IST.
+              </p>
+
+              <div
+                class="education-timeline"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="edu-item">
+                  <span class="edu-dot"></span>
+                  <div>
+                    <h4>SRM Institute of Science & Technology</h4>
+                    <p>B.Tech in Information Technology (2022 – 2026)</p>
+                  </div>
+                </div>
+                <div class="edu-item">
+                  <span class="edu-dot"></span>
+                  <div>
+                    <h4>Sri Lakshmi Narayana School</h4>
+                    <p>Higher Secondary (2020 – 2022)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--skills-->
+      <section id="skills" class="skills-section">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+          Skills
+        </h2>
+
+        <div class="skills-table">
+          <!-- Frontend -->
+          <div class="skill-row">
+            <div
+              class="skill-category"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Frontend
+            </div>
+            <div
+              class="skill-items"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <div class="skill-pill">
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML" />HTML
+              </div>
+              <div class="skill-pill">
+                <img src="https://skillicons.dev/icons?i=css" alt="CSS" />CSS
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=javascript"
+                  alt="JS"
+                />JavaScript
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=react"
+                  alt="React"
+                />React.js
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=tailwind"
+                  alt="Tailwind"
+                />Tailwind CSS
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=bootstrap"
+                  alt="Bootstrap"
+                />Bootstrap
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-row">
+            <div
+              class="skill-category"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Backend
+            </div>
+            <div
+              class="skill-items"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=flask"
+                  alt="Flask"
+                />Flask
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=mysql"
+                  alt="MySQL"
+                />MySQL
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://img.icons8.com/?size=48&id=90519&format=png"
+                  alt="REST API"
+                />REST API
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-row">
+            <div
+              class="skill-category"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Tools
+            </div>
+            <div
+              class="skill-items"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=vscode"
+                  alt="VS Code"
+                />VS Code
+              </div>
+              <div class="skill-pill">
+                <img src="https://skillicons.dev/icons?i=git" alt="Git" />Git
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=github"
+                  alt="GitHub"
+                />GitHub
+              </div>
+              <div class="skill-pill">
+                <img
+                  src="https://skillicons.dev/icons?i=vercel"
+                  alt="Vercel"
+                />Vercel
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-row">
+            <div
+              class="skill-category"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Soft Skills
+            </div>
+            <div
+              class="skill-items"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <div class="skill-pill">Time Management</div>
+              <div class="skill-pill">Team Player</div>
+              <div class="skill-pill">Problem Solving</div>
+              <div class="skill-pill">Critical Thinking</div>
+              <div class="skill-pill">Communication</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---- Projects -->
+      <div id="projects" class="projects">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+          Projects
+        </h2>
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <img src="project-1.png" alt="" />
+            </div>
+            <div
+              class="project-info"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <h3 class="proj-title">Fake Social Account Detection</h3>
+              <div class="skill-items">
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=flask"
+                    alt="Flask"
+                  />Flask
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://img.icons8.com/?size=48&id=90519&format=png"
+                    alt="REST API"
+                  />REST API
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=react"
+                    alt="React"
+                  />React.js
+                </div>
+              </div>
+              <p>
+                An intelligent ML-powered system that detects fake social media
+                profiles using behavioral patterns and data features.
+              </p>
+              <div class="project-card-buttons">
+                <a
+                  href="https://github.com/keerthirajsivashankar/Fake_ID_Detection"
+                  target="_blank"
+                  class="project-btn"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://your-live-demo-link.com"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--project 2-->
+          <div class="project-card">
+            <div
+              class="project-info"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h3 class="proj-title">Resource Management System</h3>
+              <div class="skill-items">
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=mysql"
+                    alt="MySQL"
+                  />MySQL
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=flask"
+                    alt="Flask"
+                  />Flask
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://img.icons8.com/?size=48&id=90519&format=png"
+                    alt="REST API"
+                  />REST API
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=html"
+                    alt="HTML"
+                  />HTML
+                </div>
+                <div class="skill-pill">
+                  <img src="https://skillicons.dev/icons?i=css" alt="CSS" />CSS
+                </div>
+              </div>
+              <p>
+                A full-stack web application for managing physical and digital
+                resources across departments with real-time availability
+                tracking.
+              </p>
+              <div class="project-card-buttons">
+                <a
+                  href="https://github.com/keerthirajsivashankar/Resource_Management_System"
+                  target="_blank"
+                  class="project-btn"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://your-live-demo-link.com"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div
+              class="project-image"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <img src="project-2.png" alt="" />
+            </div>
+          </div>
+
+          <!--project 3 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <img src="project-3.png" alt="" />
+            </div>
+            <div
+              class="project-info"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <h3 class="proj-title">Drive Assit</h3>
+              <div class="skill-items">
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=html"
+                    alt="HTML"
+                  />HTML
+                </div>
+                <div class="skill-pill">
+                  <img src="https://skillicons.dev/icons?i=css" alt="CSS" />CSS
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=javascript"
+                    alt="JS"
+                  />JavaScript
+                </div>
+              </div>
+              <p>
+                Drive Assist leverages the Google Maps API to provide real-time
+                navigation, route optimization, and location-based alerts,
+                enhancing driver safety and travel efficiency.
+              </p>
+              <div class="project-card-buttons">
+                <a
+                  href="https://github.com/keerthirajsivashankar/DriveAssit"
+                  target="_blank"
+                  class="project-btn"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://your-live-demo-link.com"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--project 4-->
+          <div class="project-card">
+            <div
+              class="project-info"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h3 class="proj-title">Data Analysis</h3>
+              <div class="skill-items">
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=html"
+                    alt="HTML"
+                  />HTML
+                </div>
+                <div class="skill-pill">
+                  <img src="https://skillicons.dev/icons?i=css" alt="CSS" />CSS
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=javascript"
+                    alt="JS"
+                  />JavaScript
+                </div>
+              </div>
+              <p>
+                DataLysis is a powerful data analysis and visualization tool
+                that helps users upload datasets, generate insights, and explore
+                trends using interactive dashboards and Python-based processing.
+              </p>
+              <div class="project-card-buttons">
+                <a
+                  href="https://github.com/keerthirajsivashankar/DataAnalysis"
+                  target="_blank"
+                  class="project-btn"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://your-live-demo-link.com"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <div
+              class="project-image"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <img src="project-4.png" alt="" />
+            </div>
+          </div>
+
+          <!--project 5-->
+          <div class="project-card">
+            <div
+              class="project-image"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <img src="project-5.png" alt="" />
+            </div>
+            <div
+              class="project-info"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <h3 class="proj-title">Fitness Tracker</h3>
+              <div class="skill-items">
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=flask"
+                    alt="Flask"
+                  />Flask
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://img.icons8.com/?size=48&id=90519&format=png"
+                    alt="REST API"
+                  />REST API
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=html"
+                    alt="HTML"
+                  />HTML
+                </div>
+                <div class="skill-pill">
+                  <img src="https://skillicons.dev/icons?i=css" alt="CSS" />CSS
+                </div>
+                <div class="skill-pill">
+                  <img
+                    src="https://skillicons.dev/icons?i=javascript"
+                    alt="JS"
+                  />JavaScript
+                </div>
+              </div>
+              <p>
+                Fitness Tracker is a modern web app that monitors workouts,
+                tracks health goals, and visualizes progress through interactive
+                charts — helping users stay consistent and motivated.
+              </p>
+              <div class="project-card-buttons">
+                <a
+                  href="https://github.com/keerthirajsivashankar/Fitness_Tracker"
+                  target="_blank"
+                  class="project-btn"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://your-live-demo-link.com"
+                  target="_blank"
+                  class="project-btn project-btn-outline"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Experience-->
+      <div id="experience" class="experience">
+        <div id="experience" class="experience-section">
+          <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            Experience
+          </h2>
+          <div class="timeline-container">
+            <!-- Experience 1 -->
+            <div
+              class="timeline-item left"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <div class="content-card">
+                <span class="timeline-date">Apr 2025 – Jun 2025</span>
+                <h3>Frontend Developer - ThinkUni</h3>
+                <p>
+                  Built responsive interfaces and optimized performance for
+                  production-grade university apps. Enhanced UI/UX with modern
+                  tools and best practices.
+                </p>
+              </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div
+              class="timeline-item right"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <div class="content-card">
+                <span class="timeline-date">Apr 2024 – Present</span>
+                <h3>Vice President - BetaBots Technical Club</h3>
+                <p>
+                  Led frontend initiatives, mentored juniors, and drove
+                  innovation through events and hackathons.
+                </p>
+              </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div
+              class="timeline-item left"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <div class="content-card">
+                <span class="timeline-date">Apr 2023 – Apr 2024</span>
+                <h3>Designer - BetaBots Technical Club</h3>
+                <p>
+                  Crafted design systems and graphics for college events,
+                  ensuring visual consistency and brand presence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Certifications-->
+      <div id="certification" class="certifications-section">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+          Certifications
+        </h2>
+
+        <!-- Top Tab Navigation -->
+        <div class="cert-tabs" data-aos="fade-up" data-aos-duration="1000">
+          <button class="tab-button active" onclick="showCert('nptel')">
+            NPTEL
+          </button>
+          <button class="tab-button" onclick="showCert('udemy')">Udemy</button>
+          <button class="tab-button" onclick="showCert('hackerrank')">
+            Hackerrank
+          </button>
+          <button class="tab-button" onclick="showCert('workshops')">
+            Workshops & Conferences
+          </button>
+        </div>
+
+        <!-- NPTEL Certifications -->
+        <div
+          id="nptel"
+          class="cert-category active"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <div class="cert-tile">
+            <h4>Python for Data Science</h4>
+            <p>NPTEL Swayam · May 2025</p>
+            <a
+              href="https://drive.google.com/file/d/1GH4EHLjT8xK3fcZAyIsTV-sTNnpgPvMV/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile">
+            <h4>Joy of Computing with Python</h4>
+            <p>NPTEL · Apr 2023</p>
+            <a
+              href="https://drive.google.com/file/d/1t013Z5rW4BDDFuYsuRoGov2AO5grNSEx/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile">
+            <h4>Big Data Computing</h4>
+            <p>NPTEL · Oct 2024</p>
+            <a
+              href="https://drive.google.com/file/d/1YaYkgyJh0NTSOqtGWuXd6BXOcWsDBp-j/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+        </div>
+
+        <!-- Udemy Certifications -->
+        <div
+          id="udemy"
+          class="cert-category"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <div class="cert-tile">
+            <h4>Python Complete Course For Beginners</h4>
+            <p>Udemy</p>
+            <a
+              href="https://drive.google.com/file/d/1SnZBTLzrzSpMtN6vGtwdtkNZSERoSKCq/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile" data-aos="fade-left" data-aos-duration="1000">
+            <h4>Learn HTML and CSS (Beginner to Advanced)</h4>
+            <p>Udemy · Aug 2024</p>
+            <a
+              href="https://drive.google.com/file/d/1wfSxq_BIa7wAIeOQAkT6TgicMTl0MTGg/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile" data-aos="fade-left" data-aos-duration="1000">
+            <h4>CSS and JavaScript Complete Course</h4>
+            <p>Udemy · Oct 2024</p>
+            <a
+              href="https://drive.google.com/file/d/1Pe9tgPopsaDre2bWAfXsdyJjhp_xBJHH/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile" data-aos="fade-left" data-aos-duration="1000">
+            <h4>SQL - Complete Introduction</h4>
+            <p>Udemy · Apr 2024</p>
+            <a
+              href="https://drive.google.com/file/d/123U6y4EiRGeL624ERKuzSEzQCNeSALIa/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+        </div>
+
+        <!-- Hackerrank Certifications -->
+        <div
+          id="hackerrank"
+          class="cert-category"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <div class="cert-tile">
+            <h4>Python (Basics)</h4>
+            <p>HackerRank · Apr 2024</p>
+            <a
+              href="https://drive.google.com/file/d/18hxJT0olqIzxA00lpc_sDn3x19JK8ELP/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile">
+            <h4>SQL (Basics)</h4>
+            <p>HackerRank · May 2024</p>
+            <a
+              href="https://drive.google.com/file/d/1iZgnVYDn8FwYj8oPL3Fc_Ump-2vZ9-zp/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+        </div>
+
+        <!-- Workshops & Conferences -->
+        <div
+          id="workshops"
+          class="cert-category"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <div class="cert-tile">
+            <h4>Fake Social Media Account Detection</h4>
+            <p>ICEMS 2025 · International Conference</p>
+            <a
+              href="https://drive.google.com/file/d/1TxsJwHOUgQu-tmfnf15YMLprZOqvPVW_/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <div class="cert-tile">
+            <h4>AI: Specialization to Supremacy</h4>
+            <p>SVPC / Prince DRK College · Apr 2024</p>
+            <a
+              href="https://drive.google.com/file/d/1TxsJwHOUgQu-tmfnf15YMLprZOqvPVW_/view"
+              target="_blank"
+              >View Certificate</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--Contact-->
+      <div id="contact" class="contact-modern">
+        <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">
+          Let’s Build Together
+        </h2>
+        <p class="contact-subline" data-aos="zoom-in" data-aos-duration="1000">
+          Whether it’s collaboration, a job opportunity, or just tech talk – I’m
+          all ears.
+        </p>
+
+        <div class="contact-grid" data-aos="fade-up" data-aos-duration="1000">
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/keerthi-raj-s-74a8a824b/"
+            target="_blank"
+            class="contact-box linkedin"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+              alt="LinkedIn"
+            />
+            <div>
+              <h4>LinkedIn</h4>
+              <p>Let’s connect professionally</p>
+            </div>
+          </a>
+
+          <!-- Gmail -->
+          <a
+            href="mailto:keerthirajsivashankar@gmail.com"
+            class="contact-box email"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              alt="Gmail"
+            />
+            <div>
+              <h4>Email</h4>
+              <p>keerthirajsivashankar@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/keerthirajsivashankar"
+            target="_blank"
+            class="contact-box github"
+          >
+            <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
+            <div>
+              <h4>GitHub</h4>
+              <p>Explore my code and projects</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-about">
+          <h3>Keerthi Raj S</h3>
+          <p>
+            Frontend Developer | IT Undergraduate (B.Tech, SRM IST, 2022–2026)
+          </p>
+          <p>
+            Passionate about building scalable UIs, solving real-world problems,
+            and exploring machine learning.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Developer Profiles</h4>
+          <ul>
+            <li>
+              <a href="https://leetcode.com/u/keerthiraj_s/" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/leetcode.svg"
+                  alt="LeetCode"
+                />
+                LeetCode
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.codechef.com/users/keerthi_raj"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/codechef.svg"
+                  alt="CodeChef"
+                />
+                CodeChef
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.hackerrank.com/profile/ks7186"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/hackerrank.svg"
+                  alt="HackerRank"
+                />
+                HackerRank
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Keerthi Raj. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.31/build/spline-viewer.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.31/build/spline-viewer.js"
+      async
+    ></script>
+  </body>
+</html>
