@@ -52,6 +52,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -64,6 +66,7 @@ body {
   color: var(--text-main);
   font-family: var(--font-body);
   line-height: 1.6;
+  max-width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -1100,6 +1103,8 @@ section {
     gap: 0.4rem;
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    max-width: calc(100vw - 2rem);
+    box-sizing: border-box;
   }
   
   .floating-action-bar .floating-btn:not(.primary) {

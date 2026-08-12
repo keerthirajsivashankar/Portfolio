@@ -68,9 +68,10 @@
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -100%;
+    right: 0;
+    transform: translateX(100%);
     width: 80%;
-    max-width: 320px;
+    max-width: 300px;
     height: calc(100vh - 70px);
     background: rgba(9, 13, 22, 0.98);
     backdrop-filter: blur(25px);
@@ -80,7 +81,8 @@
     align-items: flex-start;
     padding: 2.5rem 2rem;
     gap: 1.8rem;
-    transition: right 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1200;
   }
 
   .nav-links a.nav-contact-btn {
@@ -90,7 +92,7 @@
   }
 
   .nav-links.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   .hero-title {
