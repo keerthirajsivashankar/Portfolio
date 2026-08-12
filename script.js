@@ -24,7 +24,7 @@ const typewriterPhrases = [
   "Agentic AI (LangChain, LangGraph)",
   "FastAPI Microservices & Backend",
   "Vector DBs, RAG & LlamaIndex",
-  "130+ Day LeetCode Streak 🔥"
+  "130+ Day LeetCode Streak"
 ];
 
 let phraseIdx = 0;
