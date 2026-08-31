@@ -5,6 +5,7 @@
    - Bento Project Category Filter System
    - Credentials Tabs & Mobile Drawer Handler
    - Copy Toast Notification
+   -new portfolio design complete 
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,7 +25,7 @@ const typewriterPhrases = [
   "Agentic AI (LangChain, LangGraph)",
   "FastAPI Microservices & Backend",
   "Vector DBs, RAG & LlamaIndex",
-  "130+ Day LeetCode Streak"
+  "130+ Day LeetCode Streak",
 ];
 
 let phraseIdx = 0;
@@ -104,7 +105,7 @@ function initCanvasVisualizer() {
       vy: (Math.random() - 0.5) * 1.2,
       radius: Math.random() * 3.5 + 2,
       color: Math.random() > 0.4 ? "#f97316" : "#8b5cf6",
-      isAgent: Math.random() > 0.65
+      isAgent: Math.random() > 0.65,
     });
   }
 
@@ -142,9 +143,10 @@ function initCanvasVisualizer() {
           ctx.moveTo(node.x, node.y);
           ctx.lineTo(other.x, other.y);
           const alpha = (1 - dist / 105) * 0.45;
-          ctx.strokeStyle = node.color === "#f97316" 
-            ? `rgba(249, 115, 22, ${alpha})` 
-            : `rgba(139, 92, 246, ${alpha})`;
+          ctx.strokeStyle =
+            node.color === "#f97316"
+              ? `rgba(249, 115, 22, ${alpha})`
+              : `rgba(139, 92, 246, ${alpha})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -246,11 +248,14 @@ function initCertTabs() {
 
 function copyEmail() {
   const email = "keerthirajsivashankar@gmail.com";
-  navigator.clipboard.writeText(email).then(() => {
-    showToast("Email copied to clipboard!");
-  }).catch(() => {
-    showToast("Failed to copy email.");
-  });
+  navigator.clipboard
+    .writeText(email)
+    .then(() => {
+      showToast("Email copied to clipboard!");
+    })
+    .catch(() => {
+      showToast("Failed to copy email.");
+    });
 }
 
 function showToast(message) {
