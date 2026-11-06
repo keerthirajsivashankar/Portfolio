@@ -14,7 +14,86 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initProjectsFilter();
   initCertTabs();
+  initCursorGlowAndSpotlight();
+  initScrollProgressAndSpy();
+  initCountUp();
 });
+
+/* ==========================================================================
+   0. BENTO EFFECTS: cursor glow, card spotlight, progress bar, scroll-spy,
+      count-up metrics
+   ========================================================================== */
+
+function initCursorGlowAndSpotlight() {
+  const glow = document.querySelector(".cursor-glow");
+  if (glow) {
+    window.addEventListener("mousemove", (e) => {
+      glow.style.left = e.clientX + "px";
+      glow.style.top = e.clientY + "px";
+    });
+  }
+
+  document
+    .querySelectorAll(".clay-card, .glass-panel, .skeuo-terminal")
+    .forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", e.clientX - r.left + "px");
+        card.style.setProperty("--my", e.clientY - r.top + "px");
+      });
+    });
+}
+
+function initScrollProgressAndSpy() {
+  const bar = document.querySelector(".scroll-progress");
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sections = [...links]
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
+
+  function onScroll() {
+    const h = document.documentElement;
+    if (bar) {
+      bar.style.width =
+        (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 + "%";
+    }
+    let current = null;
+    sections.forEach((s) => {
+      if (s.getBoundingClientRect().top <= 140) current = s.id;
+    });
+    links.forEach((a) =>
+      a.classList.toggle("active-link", a.getAttribute("href") === "#" + current)
+    );
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+function initCountUp() {
+  const nums = document.querySelectorAll("[data-count]");
+  if (!nums.length || !("IntersectionObserver" in window)) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.count;
+        const start = performance.now();
+        const dur = 1500;
+        function step(t) {
+          const p = Math.min((t - start) / dur, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      });
+    },
+    { threshold: 0.6 }
+  );
+  nums.forEach((n) => io.observe(n));
+}
 
 /* ==========================================================================
    1. FIXED TYPEWRITER EFFECT
@@ -25,7 +104,7 @@ const typewriterPhrases = [
   "Agentic AI (LangChain, LangGraph)",
   "FastAPI Microservices & Backend",
   "Vector DBs, RAG & LlamaIndex",
-  "130+ Day LeetCode Streak",
+  "Data Engineering & ML Pipelines",
 ];
 
 let phraseIdx = 0;
@@ -73,98 +152,107 @@ function initCanvasVisualizer() {
   if (!canvas) return;
 
   const ctx = canvas.getContext("2d");
-  let width = (canvas.width = canvas.parentElement.clientWidth);
-  let height = (canvas.height = canvas.parentElement.clientHeight);
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const colors = ["#3de0d0", "#5ab9ff", "#a78bfa", "#f472b6"];
+  const mouse = { x: -999, y: -999 };
+  let w, h, nodes = [], pulses = [];
 
-  window.addEventListener("resize", () => {
-    width = canvas.width = canvas.parentElement.clientWidth;
-    height = canvas.height = canvas.parentElement.clientHeight;
-  });
-
-  const nodeCount = 36;
-  const nodes = [];
-  const mouse = { x: null, y: null, radius: 130 };
-
-  canvas.addEventListener("mousemove", (e) => {
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
     const rect = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-  });
-
-  canvas.addEventListener("mouseleave", () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
-
-  // Nodes initialization
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 1.2,
-      vy: (Math.random() - 0.5) * 1.2,
-      radius: Math.random() * 3.5 + 2,
-      color: Math.random() > 0.4 ? "#f97316" : "#8b5cf6",
-      isAgent: Math.random() > 0.65,
-    });
+    w = rect.width;
+    h = rect.height;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    nodes = Array.from({ length: 34 }, (_, i) => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: i < 5 ? 5 : 2.5, // first 5 nodes are the "agent" hubs
+      c: colors[i % colors.length],
+    }));
   }
 
-  function render() {
-    ctx.clearRect(0, 0, width, height);
+  const panel = canvas.parentElement;
+  panel.addEventListener("mousemove", (e) => {
+    const r = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - r.left;
+    mouse.y = e.clientY - r.top;
+  });
+  panel.addEventListener("mouseleave", () => {
+    mouse.x = mouse.y = -999;
+  });
 
-    nodes.forEach((node, i) => {
-      node.x += node.vx;
-      node.y += node.vy;
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    const max = 95;
 
-      if (node.x < 0 || node.x > width) node.vx *= -1;
-      if (node.y < 0 || node.y > height) node.vy *= -1;
-
-      if (mouse.x !== null && mouse.y !== null) {
-        const dx = mouse.x - node.x;
-        const dy = mouse.y - node.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < mouse.radius) {
-          const angle = Math.atan2(dy, dx);
-          const force = (mouse.radius - dist) / mouse.radius;
-          node.x -= Math.cos(angle) * force * 2;
-          node.y -= Math.sin(angle) * force * 2;
-        }
+    for (let i = 0; i < nodes.length; i++) {
+      const a = nodes[i];
+      if (!reduce) {
+        a.x += a.vx;
+        a.y += a.vy;
+        if (a.x < 0 || a.x > w) a.vx *= -1;
+        if (a.y < 0 || a.y > h) a.vy *= -1;
       }
-
       for (let j = i + 1; j < nodes.length; j++) {
-        const other = nodes[j];
-        const dx = other.x - node.x;
-        const dy = other.y - node.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 105) {
-          ctx.beginPath();
-          ctx.moveTo(node.x, node.y);
-          ctx.lineTo(other.x, other.y);
-          const alpha = (1 - dist / 105) * 0.45;
-          ctx.strokeStyle =
-            node.color === "#f97316"
-              ? `rgba(249, 115, 22, ${alpha})`
-              : `rgba(139, 92, 246, ${alpha})`;
+        const b = nodes[j];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < max) {
+          ctx.strokeStyle = `rgba(90,185,255,${(1 - d / max) * 0.45})`;
           ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
           ctx.stroke();
         }
       }
+      const dm = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+      if (dm < 140) {
+        ctx.strokeStyle = `rgba(61,224,208,${(1 - dm / 140) * 0.8})`;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.stroke();
+      }
+    }
 
+    // data pulses travelling between agent hubs
+    if (!reduce && Math.random() < 0.04) {
+      const a = Math.floor(Math.random() * 5);
+      const b = Math.floor(Math.random() * 5);
+      if (a !== b) pulses.push({ a, b, t: 0 });
+    }
+    pulses = pulses.filter((p) => p.t < 1);
+    pulses.forEach((p) => {
+      p.t += 0.012;
+      const A = nodes[p.a], B = nodes[p.b];
+      ctx.fillStyle = "#fff";
+      ctx.shadowColor = "#3de0d0";
+      ctx.shadowBlur = 14;
       ctx.beginPath();
-      ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-      ctx.fillStyle = node.color;
-      ctx.shadowBlur = node.isAgent ? 12 : 6;
-      ctx.shadowColor = node.color;
+      ctx.arc(A.x + (B.x - A.x) * p.t, A.y + (B.y - A.y) * p.t, 3, 0, 7);
       ctx.fill();
       ctx.shadowBlur = 0;
     });
 
-    requestAnimationFrame(render);
+    nodes.forEach((n) => {
+      ctx.fillStyle = n.c;
+      ctx.shadowColor = n.c;
+      ctx.shadowBlur = n.r > 3 ? 18 : 8;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, 7);
+      ctx.fill();
+    });
+    ctx.shadowBlur = 0;
+    requestAnimationFrame(draw);
   }
 
-  render();
+  resize();
+  window.addEventListener("resize", resize);
+  draw();
 }
 
 /* ==========================================================================
@@ -209,7 +297,7 @@ function initProjectsFilter() {
       projectCards.forEach((card) => {
         const cardCat = card.getAttribute("data-category");
         if (category === "all" || cardCat === category) {
-          card.style.display = "flex";
+          card.style.display = ""; // restore each card's own layout (grid/flex)
         } else {
           card.style.display = "none";
         }
@@ -223,21 +311,32 @@ function initProjectsFilter() {
    ========================================================================== */
 
 function initCertTabs() {
-  const tabBtns = document.querySelectorAll(".tab-btn");
-  const certContents = document.querySelectorAll(".cert-content");
+  const filterBtns = document.querySelectorAll(".cert-tabs .tab-btn");
+  const tiles = document.querySelectorAll(".cert-tile");
+  if (!filterBtns.length) return;
 
-  tabBtns.forEach((btn) => {
+  // show how many certificates each filter contains
+  filterBtns.forEach((btn) => {
+    const f = btn.getAttribute("data-filter");
+    const n = f === "all" ? tiles.length : [...tiles].filter((t) => t.dataset.cert === f).length;
+    btn.insertAdjacentHTML("beforeend", `<span class="count">${n}</span>`);
+  });
+
+  filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const targetId = btn.getAttribute("data-tab");
-
-      tabBtns.forEach((b) => b.classList.remove("active"));
-      certContents.forEach((c) => c.classList.remove("active"));
-
+      const f = btn.getAttribute("data-filter");
+      filterBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-      const targetContent = document.getElementById(targetId);
-      if (targetContent) {
-        targetContent.classList.add("active");
-      }
+
+      tiles.forEach((tile) => {
+        const show = f === "all" || tile.dataset.cert === f;
+        tile.classList.toggle("is-hidden", !show);
+        if (show) {
+          tile.classList.remove("pop-in");
+          void tile.offsetWidth; // restart animation
+          tile.classList.add("pop-in");
+        }
+      });
     });
   });
 }

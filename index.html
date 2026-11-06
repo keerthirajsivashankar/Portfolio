@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Meta Tags -->
@@ -16,32 +16,55 @@
 
     <!-- Open Graph / LinkedIn Sharing -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://keerthirajsivashankar.github.io/Portfolio/" />
-    <meta property="og:title" content="Keerthiraj S. | Software Development Engineer & Agentic AI Specialist" />
-    <meta property="og:description" content="Software Development Engineer at Prodapt specializing in Agentic AI systems (LangChain, LangGraph, CrewAI), FastAPI backends, and full-stack web architectures." />
-    <meta property="og:image" content="https://keerthirajsivashankar.github.io/Portfolio/hero.png" />
+    <meta
+      property="og:url"
+      content="https://keerthirajsivashankar.github.io/Portfolio/"
+    />
+    <meta
+      property="og:title"
+      content="Keerthiraj S. | Software Development Engineer & Agentic AI Specialist"
+    />
+    <meta
+      property="og:description"
+      content="Software Development Engineer at Prodapt specializing in Agentic AI systems (LangChain, LangGraph, CrewAI), FastAPI backends, and full-stack web architectures."
+    />
+    <meta
+      property="og:image"
+      content="https://keerthirajsivashankar.github.io/Portfolio/hero.png"
+    />
     <meta property="og:site_name" content="Keerthiraj S. Portfolio" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://keerthirajsivashankar.github.io/Portfolio/" />
-    <meta name="twitter:title" content="Keerthiraj S. | Software Development Engineer & Agentic AI Specialist" />
-    <meta name="twitter:description" content="Software Development Engineer at Prodapt specializing in Agentic AI systems, FastAPI backends, and full-stack web architectures." />
-    <meta name="twitter:image" content="https://keerthirajsivashankar.github.io/Portfolio/hero.png" />
-    <meta name="theme-color" content="#090d16" />
-
+    <meta
+      name="twitter:url"
+      content="https://keerthirajsivashankar.github.io/Portfolio/"
+    />
+    <meta
+      name="twitter:title"
+      content="Keerthiraj S. | Software Development Engineer & Agentic AI Specialist"
+    />
+    <meta
+      name="twitter:description"
+      content="Software Development Engineer at Prodapt specializing in Agentic AI systems, FastAPI backends, and full-stack web architectures."
+    />
+    <meta
+      name="twitter:image"
+      content="https://keerthirajsivashankar.github.io/Portfolio/hero.png"
+    />
+    <meta name="theme-color" content="#070b14" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Stylesheets (v2.2 Cache Buster) -->
-    <link rel="stylesheet" href="style.css?v=2.2" />
-    <link rel="stylesheet" href="style-mobile.css?v=2.2" />
+    <!-- Stylesheets (v3.0 Cache Buster) -->
+    <link rel="stylesheet" href="style.css?v=4.2" />
+    <link rel="stylesheet" href="style-mobile.css?v=4.2" />
     <link rel="shortcut icon" href="portfolio.ico" type="image/x-icon" />
 
     <!-- AOS Animations -->
@@ -50,6 +73,9 @@
     <title>Keerthiraj S. | SDE & Agentic AI Specialist</title>
   </head>
   <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo-container">
@@ -76,73 +102,71 @@
       </nav>
     </header>
 
-    <!-- Hero Section (No Emojis, SVG Icons, Fixed Typewriter Height) -->
+    <!-- Hero Section -->
     <section id="hero" class="hero">
       <div class="hero-grid">
         <!-- Left: Intro & Typewriter -->
         <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
-          <div class="clay-pill">
-            <svg class="svg-icon accent-orange" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-            Software Development Engineer @ Prodapt
-          </div>
-          
+          <p class="eyebrow">
+            <span class="pulse"></span> Software Development Engineer @ Prodapt
+          </p>
+
           <h1 class="hero-title">
-            Architecting <span class="gradient-accent">Agentic AI</span> & Modern Backends.
+            Hi, I'm <span class="gradient-accent">Keerthi Raj S.</span>
           </h1>
 
           <div class="typewriter-container">
-            <span style="color: var(--text-muted); margin-right: 6px;">Specialization:</span>
+            <span class="prompt">&gt;</span>
             <span id="typed-text"></span>
             <span class="typed-cursor">|</span>
           </div>
 
           <p class="hero-description">
-            Software Development Engineer at Prodapt specializing in autonomous <strong>Agentic AI workflows (LangChain, LangGraph, CrewAI)</strong>, high-performance <strong>FastAPI backends</strong>, and scalable web architectures.
+            Software Development Engineer at Prodapt building autonomous
+            <strong>Agentic AI workflows (LangChain, LangGraph, CrewAI)</strong
+            >, high-performance <strong>FastAPI backends</strong>, and
+            intelligent <strong>data engineering</strong> solutions.
           </p>
 
           <div class="hero-buttons">
             <a href="KEERTHI RAJ S_Doc.pdf" download class="neu-btn">
-              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              <svg class="svg-icon" viewBox="0 0 24 24">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+              </svg>
               Download Resume
             </a>
             <a href="#projects" class="neu-btn secondary">
-              <svg class="svg-icon accent-amber" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-              AI Projects
+              See what I built &rarr;
             </a>
-            <a href="https://github.com/keerthirajsivashankar" target="_blank" class="clay-pill">
-              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <a
+              href="https://github.com/keerthirajsivashankar"
+              target="_blank"
+              rel="noopener"
+              class="clay-pill"
+            >
+              <svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                />
+              </svg>
               GitHub
             </a>
           </div>
         </div>
 
-        <!-- Right: Skeuomorphic Code Visualizer -->
-        <div class="hero-visual" data-aos="fade-left" data-aos-duration="800">
-          <div class="skeuo-terminal hero-terminal">
-            <div class="skeuo-header">
-              <div class="skeuo-dots">
-                <span class="skeuo-dot red"></span>
-                <span class="skeuo-dot yellow"></span>
-                <span class="skeuo-dot green"></span>
-              </div>
-              <span class="skeuo-title">agentic_orchestrator.py</span>
-              <span style="font-size:0.75rem; color:var(--accent-green);">● Active</span>
-            </div>
-            
-            <div class="terminal-body">
-              <canvas id="hero-canvas"></canvas>
-              
-              <div class="terminal-overlay">
-                <div class="code-snippet">
-                  <span class="code-keyword">from</span> langgraph.graph <span class="code-keyword">import</span> StateGraph<br />
-                  <span class="code-var">agent_mesh</span> = StateGraph(<span class="code-func">AgentState</span>)<br />
-                  <span class="code-var">agent_mesh</span>.add_node(<span class="code-str">"vector_rag"</span>, rag_pipeline)<br />
-                  <span class="code-var">agent_mesh</span>.add_node(<span class="code-str">"fastapi_server"</span>, run_service)<br />
-                  <span class="code-func">print</span>(<span class="code-str">"Agentic AI Engine Online | Prodapt SDE"</span>)
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Right: live agent-network visual -->
+        <div
+          class="hero-visual"
+          data-aos="fade-left"
+          data-aos-duration="800"
+          aria-hidden="true"
+        >
+          <canvas id="hero-canvas"></canvas>
+          <div class="float-tag t1">LangGraph</div>
+          <div class="float-tag t2">RAG</div>
+          <div class="float-tag t3">FastAPI</div>
+          <div class="float-tag t4">PySpark</div>
+          <div class="float-tag t5">Multi-Agent</div>
         </div>
       </div>
     </section>
@@ -150,19 +174,35 @@
     <!-- Metrics Banner -->
     <div class="metrics-section">
       <div class="metrics-grid">
-        <div class="clay-card metric-card" data-aos="zoom-in" data-aos-delay="100">
+        <div
+          class="clay-card metric-card"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
           <div class="metric-number">SDE</div>
           <div class="metric-label">Prodapt Engineer</div>
         </div>
-        <div class="clay-card metric-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="metric-number">10+</div>
+        <div
+          class="clay-card metric-card"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <div class="metric-number"><span data-count="10">10</span>+</div>
           <div class="metric-label">AI & Backend Projects</div>
         </div>
-        <div class="clay-card metric-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="metric-number">130+</div>
-          <div class="metric-label">Day LeetCode Streak</div>
+        <div
+          class="clay-card metric-card"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <div class="metric-number"><span data-count="20">20</span>+</div>
+          <div class="metric-label">Public GitHub Repos</div>
         </div>
-        <div class="clay-card metric-card" data-aos="zoom-in" data-aos-delay="400">
+        <div
+          class="clay-card metric-card"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <div class="metric-number">2026</div>
           <div class="metric-label">SRM IST B.Tech IT</div>
         </div>
@@ -181,41 +221,103 @@
         <div class="glass-panel about-profile-card" data-aos="fade-right">
           <img src="hero.png" alt="Keerthiraj S." class="about-img" />
           <div>
-            <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;">Keerthi Raj S.</h3>
-            <p style="color: var(--accent-orange); font-weight: 600; font-size: 0.9rem;">Software Development Engineer @ Prodapt</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem">
+              Keerthi Raj S.
+            </h3>
+            <p
+              style="
+                color: var(--accent-teal);
+                font-weight: 600;
+                font-size: 0.9rem;
+              "
+            >
+              Software Development Engineer @ Prodapt
+            </p>
           </div>
         </div>
 
         <!-- Right: Professional Text & 3 Pillar Bento Cards -->
         <div class="about-details" data-aos="fade-left">
-          <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.7;">
-            I’m a <strong>Software Development Engineer (SDE) at Prodapt</strong> and IT undergraduate at SRM IST. Over recent months, I’ve deeply specialized in building <strong>Agentic AI multi-agent workflows</strong> and high-performance <strong>FastAPI backend microservices</strong>.
+          <p
+            style="
+              font-size: 1.05rem;
+              color: var(--text-muted);
+              line-height: 1.7;
+            "
+          >
+            I’m a
+            <strong>Software Development Engineer (SDE) at Prodapt</strong> and
+            IT undergraduate at SRM IST. Over recent months, I’ve deeply
+            specialized in building
+            <strong>Agentic AI multi-agent workflows</strong> and
+            high-performance <strong>FastAPI backend microservices</strong>.
           </p>
 
           <!-- 3 Specialization Pillars Grid -->
           <div class="about-pillars-grid">
             <div class="clay-card pillar-card">
               <div class="pillar-icon">
-                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"
+                  />
+                </svg>
               </div>
               <h4 class="pillar-title">Agentic AI Workflows</h4>
-              <p class="pillar-desc">Multi-agent graphs using LangChain, LangGraph, CrewAI & Vector DBs.</p>
+              <p class="pillar-desc">
+                Multi-agent graphs using LangChain, LangGraph, CrewAI & Vector
+                DBs.
+              </p>
             </div>
 
             <div class="clay-card pillar-card">
               <div class="pillar-icon">
-                <svg class="svg-icon accent-amber" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <svg class="svg-icon accent-cyan" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
               </div>
               <h4 class="pillar-title">FastAPI Microservices</h4>
-              <p class="pillar-desc">High-throughput REST APIs, Python backends, and DB optimizations.</p>
+              <p class="pillar-desc">
+                High-throughput REST APIs, Python backends, and DB
+                optimizations.
+              </p>
             </div>
 
             <div class="clay-card pillar-card">
               <div class="pillar-icon">
-                <svg class="svg-icon accent-violet" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M2 4h20v16H2z"/></svg>
+                <svg class="svg-icon accent-violet" viewBox="0 0 24 24">
+                  <path d="M4 6h16v12H4z" />
+                  <path d="M2 4h20v16H2z" />
+                </svg>
               </div>
               <h4 class="pillar-title">Full-Stack Systems</h4>
-              <p class="pillar-desc">Performant React.js UIs, modern glassmorphic web architectures.</p>
+              <p class="pillar-desc">
+                Performant React.js UIs, modern glassmorphic web architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education (moved from Experience) -->
+          <div class="clay-card edu-card" data-aos="fade-up">
+            <span class="skill-icon violet">
+              <svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+                />
+              </svg>
+            </span>
+            <div>
+              <span class="timeline-date">2022 – 2026</span>
+              <h4 class="edu-title">B.Tech in Information Technology</h4>
+              <p class="edu-school">
+                SRM Institute of Science &amp; Technology
+              </p>
+              <p class="pillar-desc">
+                Focus on DSA, Operating Systems, Machine Learning, and Web
+                Architecture.
+              </p>
             </div>
           </div>
         </div>
@@ -230,69 +332,285 @@
       </div>
 
       <div class="skills-bento-grid">
-        <!-- Quadrant 1: Agentic AI -->
-        <div class="glass-panel skills-bento-card" data-aos="fade-right">
+        <div class="glass-panel skills-bento-card sk-ai" data-aos="fade-up">
           <div class="category-header">
-            <svg class="svg-icon accent-orange" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/></svg>
-            <h3 class="gradient-accent" style="font-size:1.2rem; font-weight:700;">Agentic AI & Intelligence</h3>
+            <span class="skill-icon teal"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2zm-3 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
+                /></svg
+            ></span>
+            <h3>Agentic AI &amp; Generative AI</h3>
           </div>
           <div class="skills-pill-wrapper">
-            <div class="tech-pill"><img src="https://img.icons8.com/?size=48&id=55302&format=png" alt="LangChain" />LangChain</div>
-            <div class="tech-pill"><img src="https://img.icons8.com/?size=48&id=102573&format=png" alt="LangGraph" />LangGraph</div>
-            <div class="tech-pill"><img src="https://img.icons8.com/?size=48&id=63653&format=png" alt="CrewAI" />CrewAI</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=gcp" alt="Google ADK" />Google ADK</div>
-            <div class="tech-pill">A2A (Agent-to-Agent)</div>
-            <div class="tech-pill">RAG Architecture</div>
-            <div class="tech-pill">Vector DBs (Chroma/Pinecone)</div>
+            <div class="tech-pill">
+              <img
+                src="https://img.icons8.com/?size=48&id=55302&format=png"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />LangChain
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://img.icons8.com/?size=48&id=102573&format=png"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />LangGraph
+            </div>
+            <div class="tech-pill">LangSmith</div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=gcp"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />Google ADK
+            </div>
             <div class="tech-pill">LlamaIndex</div>
+            <div class="tech-pill">
+              <img
+                src="https://img.icons8.com/?size=48&id=63653&format=png"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />CrewAI
+            </div>
+            <div class="tech-pill">RAG</div>
+            <div class="tech-pill">Multi-Agent Systems</div>
+            <div class="tech-pill">Context Engineering</div>
+            <div class="tech-pill">Vector Databases</div>
+            <div class="tech-pill">ChromaDB</div>
           </div>
         </div>
-
-        <!-- Quadrant 2: Backend -->
-        <div class="glass-panel skills-bento-card" data-aos="fade-left">
+        <div class="glass-panel skills-bento-card sk-lang" data-aos="fade-up">
           <div class="category-header">
-            <svg class="svg-icon accent-amber" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            <h3 class="gradient-accent" style="font-size:1.2rem; font-weight:700;">Backend & Cloud Systems</h3>
+            <span class="skill-icon cyan"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+                /></svg
+            ></span>
+            <h3>Languages</h3>
           </div>
           <div class="skills-pill-wrapper">
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=fastapi" alt="FastAPI" />FastAPI</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=py" alt="Python" />Python</div>
-            <div class="tech-pill"><img src="https://img.icons8.com/?size=48&id=90519&format=png" alt="REST API" />RESTful APIs</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=flask" alt="Flask" />Flask</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" />MySQL</div>
-            <div class="tech-pill">Microservices Architecture</div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=py"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />Python
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=js"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />JavaScript
+            </div>
           </div>
         </div>
-
-        <!-- Quadrant 3: Frontend -->
-        <div class="glass-panel skills-bento-card" data-aos="fade-right">
+        <div class="glass-panel skills-bento-card sk-front" data-aos="fade-up">
           <div class="category-header">
-            <svg class="svg-icon accent-violet" viewBox="0 0 24 24"><path d="M12 2l10 9h-3v11H5V11H2l10-9z"/></svg>
-            <h3 class="gradient-accent" style="font-size:1.2rem; font-weight:700;">Frontend & Systems</h3>
+            <span class="skill-icon violet"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"
+                /></svg
+            ></span>
+            <h3>Frontend</h3>
           </div>
           <div class="skills-pill-wrapper">
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=react" alt="React" />React.js</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=js" alt="JS" />JavaScript (ES6+)</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=html" alt="HTML" />HTML5</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=css" alt="CSS" />CSS3 / Multi-Morphism</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" />Tailwind CSS</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" />Bootstrap</div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=react"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />React
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=html"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />HTML
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=css"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />CSS
+            </div>
           </div>
         </div>
-
-        <!-- Quadrant 4: Tools -->
-        <div class="glass-panel skills-bento-card" data-aos="fade-left">
+        <div class="glass-panel skills-bento-card sk-back" data-aos="fade-up">
           <div class="category-header">
-            <svg class="svg-icon accent-orange" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.6C.4 7 1 10 3 12c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.4-.4.4-1.1 0-1.3z"/></svg>
-            <h3 class="gradient-accent" style="font-size:1.2rem; font-weight:700;">Engineering Tools</h3>
+            <span class="skill-icon teal"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                /></svg
+            ></span>
+            <h3>Backend</h3>
           </div>
           <div class="skills-pill-wrapper">
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" />VS Code</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=git" alt="Git" />Git</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" />GitHub</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=postman" alt="Postman" />Postman</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=vercel" alt="Vercel" />Vercel</div>
-            <div class="tech-pill"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" />Docker</div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=fastapi"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />FastAPI
+            </div>
+            <div class="tech-pill">REST APIs</div>
+            <div class="tech-pill">Backend Architecture</div>
+          </div>
+        </div>
+        <div class="glass-panel skills-bento-card sk-db" data-aos="fade-up">
+          <div class="category-header">
+            <span class="skill-icon cyan"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.59 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm6 14c0 .5-2.13 2-6 2s-6-1.5-6-2v-2.23c1.61.78 3.72 1.23 6 1.23s4.39-.45 6-1.23V17zm0-4.55c-1.3.95-3.58 1.55-6 1.55s-4.7-.6-6-1.55V9.64c1.47.83 3.61 1.36 6 1.36s4.53-.53 6-1.36v2.81zM12 9C8.13 9 6 7.5 6 7s2.13-2 6-2 6 1.5 6 2-2.13 2-6 2z"
+                /></svg
+            ></span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skills-pill-wrapper">
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=mongodb"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />MongoDB
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=postgres"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />PostgreSQL
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=mysql"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />MySQL
+            </div>
+          </div>
+        </div>
+        <div class="glass-panel skills-bento-card sk-de" data-aos="fade-up">
+          <div class="category-header">
+            <span class="skill-icon violet"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"
+                /></svg
+            ></span>
+            <h3>Data Engineering</h3>
+          </div>
+          <div class="skills-pill-wrapper">
+            <div class="tech-pill">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/apachespark.svg"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />PySpark
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/apacheairflow.svg"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />Apache Airflow
+            </div>
+            <div class="tech-pill">DAG Development</div>
+            <div class="tech-pill">Data Pipelines</div>
+            <div class="tech-pill">Data Processing</div>
+          </div>
+        </div>
+        <div class="glass-panel skills-bento-card sk-ml" data-aos="fade-up">
+          <div class="category-header">
+            <span class="skill-icon teal"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"
+                /></svg
+            ></span>
+            <h3>Machine Learning &amp; Data Science</h3>
+          </div>
+          <div class="skills-pill-wrapper">
+            <div class="tech-pill">Machine Learning</div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=pandas"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />Pandas
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=numpy"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />NumPy
+            </div>
+            <div class="tech-pill">Matplotlib</div>
+            <div class="tech-pill">Seaborn</div>
+            <div class="tech-pill">Data Analysis</div>
+            <div class="tech-pill">Data Visualization</div>
+          </div>
+        </div>
+        <div class="glass-panel skills-bento-card sk-tools" data-aos="fade-up">
+          <div class="category-header">
+            <span class="skill-icon cyan"
+              ><svg class="svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.6C.4 7 1 10 3 12c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.4-.4.4-1.1 0-1.3z"
+                /></svg
+            ></span>
+            <h3>Dev Tools</h3>
+          </div>
+          <div class="skills-pill-wrapper">
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=git"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />Git
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://skillicons.dev/icons?i=github"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />GitHub
+            </div>
+            <div class="tech-pill">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/jupyter.svg"
+                alt=""
+                loading="lazy"
+                onerror="this.remove()"
+              />Jupyter
+            </div>
           </div>
         </div>
       </div>
@@ -310,55 +628,62 @@
         <div class="timeline-item left" data-aos="fade-right">
           <div class="timeline-node"></div>
           <div class="clay-card timeline-card">
-            <span class="timeline-date">Recent – Present</span>
+            <span class="timeline-date">July 2026 – Present</span>
             <h3 class="timeline-role">Software Development Engineer (SDE)</h3>
             <span class="timeline-company">Prodapt</span>
-            <p style="font-size:0.92rem; color:var(--text-muted);">
-              Engineering backend microservices and implementing Agentic AI automation solutions.
+            <p style="font-size: 0.92rem; color: var(--text-muted)">
+              Engineering backend microservices and implementing Agentic AI
+              automation solutions.
             </p>
             <ul class="timeline-bullets">
               <li>Developing high-throughput FastAPI REST services.</li>
-              <li>Architecting multi-agent AI systems with LangChain and LangGraph.</li>
+              <li>
+                Architecting multi-agent AI systems with LangChain and
+                LangGraph.
+              </li>
               <li>Optimizing vector DB context retrieval pipelines.</li>
             </ul>
           </div>
         </div>
 
-        <!-- Item 2: ThinkUni -->
+        <!-- Item 2: Prodapt Intern -->
         <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-node"></div>
+          <div class="clay-card timeline-card">
+            <span class="timeline-date">Feb 2026 – Jun 2026</span>
+            <h3 class="timeline-role">Software Development Intern</h3>
+            <span class="timeline-company">Prodapt</span>
+            <p style="font-size: 0.92rem; color: var(--text-muted)">
+              Where I learned the AI stack hands-on and built it into real
+              capstone projects.
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                Learned Agentic &amp; Generative AI: LangChain, LangGraph,
+                CrewAI, Google ADK, A2A and LlamaIndex RAG.
+              </li>
+              <li>
+                Built a multi-agent support automation platform and a Spark
+                &rarr; Airflow &rarr; MySQL &rarr; ML telecom pipeline.
+              </li>
+              <li>
+                Practised FastAPI backends, SQL databases and data engineering
+                fundamentals.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3: ThinkUni -->
+        <div class="timeline-item left" data-aos="fade-right">
           <div class="timeline-node"></div>
           <div class="clay-card timeline-card">
             <span class="timeline-date">Apr 2025 – Jun 2025</span>
             <h3 class="timeline-role">Frontend Developer</h3>
             <span class="timeline-company">ThinkUni</span>
-            <p style="font-size:0.92rem; color:var(--text-muted);">
-              Built production-grade, highly responsive web interfaces for university portals.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 3: BetaBots VP -->
-        <div class="timeline-item left" data-aos="fade-right">
-          <div class="timeline-node"></div>
-          <div class="clay-card timeline-card">
-            <span class="timeline-date">Apr 2024 – Present</span>
-            <h3 class="timeline-role">Vice President</h3>
-            <span class="timeline-company">BetaBots Technical Club</span>
-            <p style="font-size:0.92rem; color:var(--text-muted);">
-              Led frontend technical initiatives, mentored juniors, and led hackathons.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 4: SRM IST -->
-        <div class="timeline-item right" data-aos="fade-left">
-          <div class="timeline-node"></div>
-          <div class="clay-card timeline-card">
-            <span class="timeline-date">2022 – 2026</span>
-            <h3 class="timeline-role">B.Tech in Information Technology</h3>
-            <span class="timeline-company">SRM Institute of Science & Technology</span>
-            <p style="font-size:0.92rem; color:var(--text-muted);">
-              Focus on DSA, Operating Systems, Machine Learning, and Web Architecture.
+            <p style="font-size: 0.92rem; color: var(--text-muted)">
+              Built production-grade, highly responsive web interfaces for
+              university portals.
             </p>
           </div>
         </div>
@@ -374,48 +699,141 @@
 
       <!-- Filter Buttons -->
       <div class="projects-filter" data-aos="fade-up">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn active" data-filter="all">
+          All Projects
+        </button>
         <button class="filter-btn" data-filter="ai">Agentic AI & RAG</button>
-        <button class="filter-btn" data-filter="backend">Backend & FastAPI</button>
-        <button class="filter-btn" data-filter="web">Web Applications</button>
+        <button class="filter-btn" data-filter="backend">
+          Backend & FastAPI
+        </button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
       </div>
 
       <!-- Bento Projects Layout -->
       <!-- TOP SPOTLIGHT PROJECT HERO CARD -->
-      <div class="clay-card spotlight-card project-card" data-category="ai" data-aos="fade-up">
+      <div
+        class="clay-card spotlight-card project-card"
+        data-category="ai"
+        data-aos="fade-up"
+      >
         <div class="spotlight-visual">
-          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #a7f3d0; line-height: 1.6;">
-            <span style="color:var(--accent-orange)">class</span> MultiAgentOrchestrator:<br />
-            &nbsp;&nbsp;<span style="color:var(--accent-amber)">def</span> run_pipeline(user_query):<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;state = langgraph.init_state(user_query)<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;agents = [RAGRetriever(), FastAPIService()]<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--accent-violet)">return</span> crewai.execute(agents, state)
-          </div>
+          <pre
+            class="repo-tree"
+          ><span class="t-dim">MultiAgent_application/</span>
+|- <span class="t-teal">orchestration/</span>    <span class="t-dim"># LangGraph state graph</span>
+|    <span class="t-v">graph.py</span> | <span class="t-v">crew_nodes.py</span> <span class="t-dim">(CrewAI)</span>
+|- <span class="t-teal">adk-services/</span>     <span class="t-dim"># Google ADK agents via A2A</span>
+|    <span class="t-cyan">billing_resolution</span>
+|    <span class="t-cyan">network_diagnostics</span>
+|- <span class="t-teal">llamaindex_rag/</span>   <span class="t-dim"># doc RAG + SQL search</span>
+|- <span class="t-teal">data/</span> | <span class="t-teal">sql/</span>      <span class="t-dim"># policies, index, ops DB</span></pre>
         </div>
 
-        <div style="display:flex; flex-direction:column; justify-content:center; gap:1rem;">
-          <div class="clay-pill" style="align-self:flex-start; font-size:0.78rem;">Spotlight Architecture Project</div>
-          <h3 style="font-size: 1.6rem; font-weight:800;" class="gradient-accent">Multi-Agent RAG Orchestrator</h3>
+        <div class="spotlight-body">
+          <div
+            class="clay-pill"
+            style="align-self: flex-start; font-size: 0.78rem"
+          >
+            Spotlight Architecture Project
+          </div>
+          <h3
+            style="font-size: 1.6rem; font-weight: 700"
+            class="gradient-accent"
+          >
+            Multi-Agent Support Automation Platform
+          </h3>
           <div class="skills-pill-wrapper">
-            <span class="tech-pill">LangChain</span>
             <span class="tech-pill">LangGraph</span>
             <span class="tech-pill">CrewAI</span>
-            <span class="tech-pill">FastAPI</span>
-            <span class="tech-pill">ChromaDB</span>
+            <span class="tech-pill">Google ADK</span>
+            <span class="tech-pill">A2A</span>
+            <span class="tech-pill">LlamaIndex RAG</span>
+            <span class="tech-pill">SQL</span>
           </div>
           <p class="project-desc">
-            Autonomous multi-agent system combining LangGraph state machines, CrewAI task delegation, and vector-backed semantic search to resolve complex queries across dynamic datasets.
+            Capstone multi-agent platform for customer-support and return
+            automation. LangGraph orchestrates the workflow, CrewAI nodes
+            delegate tasks, specialised Google ADK agents (billing resolution,
+            network diagnostics) are called over the A2A protocol, and
+            LlamaIndex powers document RAG and semantic search over policy
+            documents and an operations database.
           </p>
           <div class="project-actions">
-            <a href="https://github.com/keerthirajsivashankar" target="_blank" class="neu-btn">GitHub Repo</a>
+            <a
+              href="https://github.com/keerthirajsivashankar/MultiAgent_application"
+              target="_blank"
+              rel="noopener"
+              class="neu-btn"
+              >GitHub Repo</a
+            >
           </div>
         </div>
       </div>
 
-      <!-- SECONDARY PROJECTS GRID -->
+      <!-- SECONDARY PROJECTS GRID (picked from github.com/keerthirajsivashankar) -->
       <div class="projects-grid">
-        <!-- Project 2: Fake Social Account Detection -->
         <div class="skeuo-terminal project-card" data-category="backend" data-aos="fade-up">
+          <div class="skeuo-header">
+            <div class="skeuo-dots">
+              <span class="skeuo-dot red"></span>
+              <span class="skeuo-dot yellow"></span>
+              <span class="skeuo-dot green"></span>
+            </div>
+            <span class="skeuo-title">telecom_intelligence.py</span>
+          </div>
+          <div class="project-visual flow">
+            <span class="node">Raw Data</span><i>&rarr;</i><span class="node hot">Spark</span><i>&rarr;</i><span class="node">Parquet</span><i>&rarr;</i><span class="node hot">Airflow</span><i>&rarr;</i><span class="node">MySQL</span><i>&rarr;</i><span class="node hot">FastAPI</span><i>&rarr;</i><span class="node">ML</span><i>&rarr;</i><span class="node hot">React</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Telecom Network Intelligence System</h3>
+            <div class="skills-pill-wrapper">
+              <span class="tech-pill">Apache Spark</span>
+              <span class="tech-pill">Airflow</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">scikit-learn</span>
+              <span class="tech-pill">React</span>
+            </div>
+            <p class="project-desc">
+              End-to-end data engineering + ML pipeline: Spark cleans telecom usage data into Parquet, Airflow orchestrates loads into a MySQL star-schema warehouse, FastAPI serves analytics, and a Random Forest model predicts network congestion risk on a React dashboard.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/keerthirajsivashankar/Telecom_Intelligence" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="skeuo-terminal project-card" data-category="backend" data-aos="fade-up" data-aos-delay="100">
+          <div class="skeuo-header">
+            <div class="skeuo-dots">
+              <span class="skeuo-dot red"></span>
+              <span class="skeuo-dot yellow"></span>
+              <span class="skeuo-dot green"></span>
+            </div>
+            <span class="skeuo-title">gitpulse.ts</span>
+          </div>
+          <div class="project-visual lines">
+            <div class="ln"><b class="dot"></b>alice &middot; editing <u>auth.ts</u> L42&ndash;58</div>
+            <div class="ln"><b class="dot v"></b>you &middot; editing <u>auth.ts</u> L50</div>
+            <div class="ln alert">Conflict risk: HIGH &mdash; overlapping lines</div>
+            <div class="ln dim">branch: feature/login &nbsp;&middot;&nbsp; live via WebSocket</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">GitPulse &ndash; Merge Conflict Prevention</h3>
+            <div class="skills-pill-wrapper">
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">VS Code Extension</span>
+              <span class="tech-pill">Express</span>
+              <span class="tech-pill">Socket.IO</span>
+            </div>
+            <p class="project-desc">
+              Real-time VS Code extension and WebSocket sync server that tracks teammates' active files and cursors and raises High / Medium / Low conflict alerts before a merge conflict happens.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/keerthirajsivashankar/GItPulse" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="skeuo-terminal project-card" data-category="backend" data-aos="fade-up" data-aos-delay="200">
           <div class="skeuo-header">
             <div class="skeuo-dots">
               <span class="skeuo-dot red"></span>
@@ -424,28 +842,87 @@
             </div>
             <span class="skeuo-title">fake_id_detector.py</span>
           </div>
-          <div class="project-media">
-            <img src="project-1.png" alt="Fake ID Detection" class="project-img" />
+          <div class="project-visual meter">
+            <div class="meter-head"><small>Risk score</small><strong>High</strong></div>
+            <div class="meter-bar"><i></i></div>
+            <div class="reasons">
+              <span>Suspicious follower ratio</span>
+              <span>Missing profile photo</span>
+              <span>Heavy numeric username</span>
+            </div>
           </div>
           <div class="project-info">
             <h3 class="project-title">Fake Social Account Detection</h3>
             <div class="skills-pill-wrapper">
               <span class="tech-pill">Flask</span>
-              <span class="tech-pill">REST API</span>
-              <span class="tech-pill">React.js</span>
-              <span class="tech-pill">ML Classifier</span>
+              <span class="tech-pill">scikit-learn</span>
+              <span class="tech-pill">React + Vite</span>
+              <span class="tech-pill">Explainable AI</span>
             </div>
             <p class="project-desc">
-              ML-powered detection engine analyzing user metadata and behavioral features to flag fake profiles in real time.
+              Random Forest classifier on 11 behavioural features &mdash; <strong>91.4% accuracy</strong> and <strong>95.7% recall</strong> on fake accounts &mdash; with risk scoring, human-readable explanations and bulk CSV scanning. Presented at ICEMS 2025.
             </p>
             <div class="project-actions">
-              <a href="https://github.com/keerthirajsivashankar/Fake_ID_Detection" target="_blank" class="neu-btn">GitHub</a>
+              <a href="https://github.com/keerthirajsivashankar/Fake_ID_Detection" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
             </div>
           </div>
         </div>
-
-        <!-- Project 3: Resource Management System -->
+        <div class="skeuo-terminal project-card" data-category="backend" data-aos="fade-up">
+          <div class="skeuo-header">
+            <div class="skeuo-dots">
+              <span class="skeuo-dot red"></span>
+              <span class="skeuo-dot yellow"></span>
+              <span class="skeuo-dot green"></span>
+            </div>
+            <span class="skeuo-title">churn_analysis.ipynb</span>
+          </div>
+          <div class="project-visual flow">
+            <span class="node">dataset.csv</span><i>&rarr;</i><span class="node hot">Pandas</span><i>&rarr;</i><span class="node">EDA</span><i>&rarr;</i><span class="node hot">Random Forest</span><i>&rarr;</i><span class="node">Evaluation</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Telecom Customer Churn Analysis</h3>
+            <div class="skills-pill-wrapper">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">scikit-learn</span>
+              <span class="tech-pill">Jupyter</span>
+            </div>
+            <p class="project-desc">
+              Analysis of the IBM Telco customer-churn dataset: exploratory data analysis plus a Random Forest model that predicts which customers are likely to churn, with a saved model and an evaluation report.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/keerthirajsivashankar/Data_Science_project" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
         <div class="skeuo-terminal project-card" data-category="backend" data-aos="fade-up" data-aos-delay="100">
+          <div class="skeuo-header">
+            <div class="skeuo-dots">
+              <span class="skeuo-dot red"></span>
+              <span class="skeuo-dot yellow"></span>
+              <span class="skeuo-dot green"></span>
+            </div>
+            <span class="skeuo-title">inventory_api.py</span>
+          </div>
+          <div class="project-visual flow">
+            <span class="node">REST client</span><i>&rarr;</i><span class="node hot">FastAPI</span><i>&rarr;</i><span class="node">SQLite</span><i>&rarr;</i><span class="node hot">Logs</span>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Inventory Management System</h3>
+            <div class="skills-pill-wrapper">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">SQLite</span>
+            </div>
+            <p class="project-desc">
+              Inventory management backend built with FastAPI and SQLite, with request logging and environment-based configuration.
+            </p>
+            <div class="project-actions">
+              <a href="https://github.com/keerthirajsivashankar/inventry_manage_system" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="skeuo-terminal project-card" data-category="backend" data-aos="fade-up" data-aos-delay="200">
           <div class="skeuo-header">
             <div class="skeuo-dots">
               <span class="skeuo-dot red"></span>
@@ -454,83 +931,99 @@
             </div>
             <span class="skeuo-title">resource_system.py</span>
           </div>
-          <div class="project-media">
-            <img src="project-2.png" alt="Resource Management System" class="project-img" />
+          <div class="project-visual flow">
+            <span class="node">Frontend</span><i>&rarr;</i><span class="node hot">REST API</span><i>&rarr;</i><span class="node">MySQL</span><i>&rarr;</i><span class="node hot">Auth rules</span>
           </div>
           <div class="project-info">
             <h3 class="project-title">Resource Management System</h3>
             <div class="skills-pill-wrapper">
-              <span class="tech-pill">MySQL</span>
               <span class="tech-pill">Flask</span>
+              <span class="tech-pill">MySQL</span>
               <span class="tech-pill">REST API</span>
               <span class="tech-pill">HTML/CSS</span>
             </div>
             <p class="project-desc">
-              Full-stack system tracking digital and physical resources with real-time availability and authorization rules.
+              Full-stack system for tracking digital and physical resources with real-time availability and authorization rules.
             </p>
             <div class="project-actions">
-              <a href="https://github.com/keerthirajsivashankar/Resource_Management_System" target="_blank" class="neu-btn">GitHub</a>
+              <a href="https://github.com/keerthirajsivashankar/Resource_Management_System" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
             </div>
           </div>
         </div>
-
-        <!-- Project 4: Drive Assist -->
-        <div class="skeuo-terminal project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+        <div class="skeuo-terminal project-card" data-category="web" data-aos="fade-up">
           <div class="skeuo-header">
             <div class="skeuo-dots">
               <span class="skeuo-dot red"></span>
               <span class="skeuo-dot yellow"></span>
               <span class="skeuo-dot green"></span>
             </div>
-            <span class="skeuo-title">drive_assist.js</span>
+            <span class="skeuo-title">music2d.js</span>
           </div>
-          <div class="project-media">
-            <img src="project-3.png" alt="Drive Assist" class="project-img" />
+          <div class="project-visual record">
+            <div class="disc"><span></span></div>
+            <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i></div>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Drive Assist App</h3>
+            <h3 class="project-title">Music2D &ndash; Retro Music Player</h3>
             <div class="skills-pill-wrapper">
-              <span class="tech-pill">Google Maps API</span>
               <span class="tech-pill">JavaScript</span>
-              <span class="tech-pill">HTML/CSS</span>
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">Tailwind CSS</span>
             </div>
             <p class="project-desc">
-              Interactive navigation app incorporating Google Maps API for route optimization and live alerts.
+              Retro music player with an animated spinning phonograph, mood-based categories, favourites, library and album views, search and progress controls &mdash; built in vanilla JS with a component-style architecture.
             </p>
             <div class="project-actions">
-              <a href="https://github.com/keerthirajsivashankar/DriveAssit" target="_blank" class="neu-btn">GitHub</a>
+              <a href="https://github.com/keerthirajsivashankar/Music2D" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
             </div>
           </div>
         </div>
-
-        <!-- Project 5: Data Analysis -->
-        <div class="skeuo-terminal project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
+        <div class="skeuo-terminal project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
           <div class="skeuo-header">
             <div class="skeuo-dots">
               <span class="skeuo-dot red"></span>
               <span class="skeuo-dot yellow"></span>
               <span class="skeuo-dot green"></span>
             </div>
-            <span class="skeuo-title">datalysis.py</span>
+            <span class="skeuo-title">fraudshield.jsx</span>
           </div>
-          <div class="project-media">
-            <img src="project-4.png" alt="Data Analysis" class="project-img" />
+          <div class="project-visual lines">
+            <div class="ln"><b class="dot"></b>Transaction check &middot; <u>simulated</u></div>
+            <div class="ln"><b class="dot v"></b>Amount &middot; location &middot; card details</div>
+            <div class="ln alert">Result: FRAUD suspected</div>
+            <div class="ln dim">awareness &middot; dashboard &middot; case scenarios</div>
           </div>
           <div class="project-info">
-            <h3 class="project-title">DataLysis Analytics</h3>
+            <h3 class="project-title">FraudShield &ndash; Fraud Awareness Demo</h3>
             <div class="skills-pill-wrapper">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">Pandas</span>
-              <span class="tech-pill">Data Visuals</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">Charts</span>
             </div>
             <p class="project-desc">
-              Data visualization platform supporting dataset ingestion and automated analytical report generation.
+              Credit-card fraud awareness app with an interactive dashboard, a transaction form that simulates fraud analysis, and predefined case scenarios.
             </p>
             <div class="project-actions">
-              <a href="https://github.com/keerthirajsivashankar/DataAnalysis" target="_blank" class="neu-btn">GitHub</a>
+              <a href="https://github.com/keerthirajsivashankar/Fraud_Detection_system" target="_blank" rel="noopener" class="neu-btn">GitHub</a>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="projects-more" data-aos="fade-up">
+        <a
+          href="https://github.com/keerthirajsivashankar?tab=repositories"
+          target="_blank"
+          rel="noopener"
+          class="neu-btn secondary"
+        >
+          <svg class="svg-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+            />
+          </svg>
+          See all repositories on GitHub
+        </a>
       </div>
     </section>
 
@@ -541,97 +1034,146 @@
         <h2 class="section-title">Certifications & Profiles</h2>
       </div>
 
-      <!-- Tab Buttons -->
+      <!-- Filter Buttons (all certificates are shown by default) -->
       <div class="cert-tabs" data-aos="fade-up">
-        <button class="tab-btn active" data-tab="nptel">NPTEL</button>
-        <button class="tab-btn" data-tab="udemy">Udemy</button>
-        <button class="tab-btn" data-tab="hackerrank">HackerRank</button>
-        <button class="tab-btn" data-tab="workshops">Conferences</button>
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="nptel">NPTEL</button>
+        <button class="tab-btn" data-filter="udemy">Udemy</button>
+        <button class="tab-btn" data-filter="hackerrank">HackerRank</button>
+        <button class="tab-btn" data-filter="workshops">Conferences</button>
       </div>
 
-      <!-- NPTEL -->
-      <div id="nptel" class="cert-content active" data-aos="fade-up">
-        <div class="clay-card cert-tile">
+      <!-- All certificates -->
+      <div class="cert-grid" id="certGrid" data-aos="fade-up">
+        <div class="clay-card cert-tile" data-cert="nptel">
+          <span class="cert-badge">NPTEL</span>
           <div>
             <h4 class="cert-title">Python for Data Science</h4>
             <p class="cert-issuer">NPTEL Swayam · May 2025</p>
           </div>
-          <a href="https://drive.google.com/file/d/1GH4EHLjT8xK3fcZAyIsTV-sTNnpgPvMV/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1GH4EHLjT8xK3fcZAyIsTV-sTNnpgPvMV/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="nptel">
+          <span class="cert-badge">NPTEL</span>
           <div>
             <h4 class="cert-title">Joy of Computing with Python</h4>
             <p class="cert-issuer">NPTEL · Apr 2023</p>
           </div>
-          <a href="https://drive.google.com/file/d/1t013Z5rW4BDDFuYsuRoGov2AO5grNSEx/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1t013Z5rW4BDDFuYsuRoGov2AO5grNSEx/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="nptel">
+          <span class="cert-badge">NPTEL</span>
           <div>
             <h4 class="cert-title">Big Data Computing</h4>
             <p class="cert-issuer">NPTEL · Oct 2024</p>
           </div>
-          <a href="https://drive.google.com/file/d/1YaYkgyJh0NTSOqtGWuXd6BXOcWsDBp-j/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1YaYkgyJh0NTSOqtGWuXd6BXOcWsDBp-j/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-      </div>
-
-      <!-- Udemy -->
-      <div id="udemy" class="cert-content" data-aos="fade-up">
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="udemy">
+          <span class="cert-badge">Udemy</span>
           <div>
             <h4 class="cert-title">Python Complete Masterclass</h4>
             <p class="cert-issuer">Udemy</p>
           </div>
-          <a href="https://drive.google.com/file/d/1SnZBTLzrzSpMtN6vGtwdtkNZSERoSKCq/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1SnZBTLzrzSpMtN6vGtwdtkNZSERoSKCq/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="udemy">
+          <span class="cert-badge">Udemy</span>
           <div>
             <h4 class="cert-title">HTML & CSS Advanced Guide</h4>
             <p class="cert-issuer">Udemy · Aug 2024</p>
           </div>
-          <a href="https://drive.google.com/file/d/1wfSxq_BIa7wAIeOQAkT6TgicMTl0MTGg/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1wfSxq_BIa7wAIeOQAkT6TgicMTl0MTGg/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="udemy">
+          <span class="cert-badge">Udemy</span>
           <div>
             <h4 class="cert-title">CSS & JavaScript Complete</h4>
             <p class="cert-issuer">Udemy · Oct 2024</p>
           </div>
-          <a href="https://drive.google.com/file/d/1Pe9tgPopsaDre2bWAfXsdyJjhp_xBJHH/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1Pe9tgPopsaDre2bWAfXsdyJjhp_xBJHH/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-      </div>
-
-      <!-- HackerRank -->
-      <div id="hackerrank" class="cert-content" data-aos="fade-up">
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="hackerrank">
+          <span class="cert-badge">HackerRank</span>
           <div>
             <h4 class="cert-title">Python (Basics)</h4>
             <p class="cert-issuer">HackerRank · Apr 2024</p>
           </div>
-          <a href="https://drive.google.com/file/d/18hxJT0olqIzxA00lpc_sDn3x19JK8ELP/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/18hxJT0olqIzxA00lpc_sDn3x19JK8ELP/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="hackerrank">
+          <span class="cert-badge">HackerRank</span>
           <div>
             <h4 class="cert-title">SQL (Basics)</h4>
             <p class="cert-issuer">HackerRank · May 2024</p>
           </div>
-          <a href="https://drive.google.com/file/d/1iZgnVYDn8FwYj8oPL3Fc_Ump-2vZ9-zp/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1iZgnVYDn8FwYj8oPL3Fc_Ump-2vZ9-zp/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-      </div>
-
-      <!-- Workshops -->
-      <div id="workshops" class="cert-content" data-aos="fade-up">
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="workshops">
+          <span class="cert-badge">Conferences</span>
           <div>
             <h4 class="cert-title">Fake Social Media Detection</h4>
             <p class="cert-issuer">ICEMS 2025 International Conference</p>
           </div>
-          <a href="https://drive.google.com/file/d/1TxsJwHOUgQu-tmfnf15YMLprZOqvPVW_/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1TxsJwHOUgQu-tmfnf15YMLprZOqvPVW_/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
-        <div class="clay-card cert-tile">
+        <div class="clay-card cert-tile" data-cert="workshops">
+          <span class="cert-badge">Conferences</span>
           <div>
             <h4 class="cert-title">AI: Specialization to Supremacy</h4>
             <p class="cert-issuer">SVPC / Prince DRK · Apr 2024</p>
           </div>
-          <a href="https://drive.google.com/file/d/1TxsJwHOUgQu-tmfnf15YMLprZOqvPVW_/view" target="_blank" class="cert-link">View Certificate</a>
+          <a
+            href="https://drive.google.com/file/d/1TxsJwHOUgQu-tmfnf15YMLprZOqvPVW_/view"
+            target="_blank"
+            class="cert-link"
+            >View Certificate</a
+          >
         </div>
       </div>
 
@@ -639,22 +1181,43 @@
       <div class="profiles-wrapper" data-aos="fade-up">
         <h3 class="profiles-title">Competitive Programming Profiles</h3>
         <div class="profiles-grid">
-          <a href="https://leetcode.com/u/keerthiraj_s/" target="_blank" class="glass-panel profile-card">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/leetcode.svg" alt="LeetCode" />
+          <a
+            href="https://leetcode.com/u/keerthiraj_s/"
+            target="_blank"
+            class="glass-panel profile-card"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/leetcode.svg"
+              alt="LeetCode"
+            />
             <div class="profile-info">
               <h4>LeetCode</h4>
               <p>130+ Day Daily Streak</p>
             </div>
           </a>
-          <a href="https://www.codechef.com/users/keerthi_raj" target="_blank" class="glass-panel profile-card">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/codechef.svg" alt="CodeChef" />
+          <a
+            href="https://www.codechef.com/users/keerthi_raj"
+            target="_blank"
+            class="glass-panel profile-card"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/codechef.svg"
+              alt="CodeChef"
+            />
             <div class="profile-info">
               <h4>CodeChef</h4>
               <p>keerthi_raj</p>
             </div>
           </a>
-          <a href="https://www.hackerrank.com/profile/ks7186" target="_blank" class="glass-panel profile-card">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/hackerrank.svg" alt="HackerRank" />
+          <a
+            href="https://www.hackerrank.com/profile/ks7186"
+            target="_blank"
+            class="glass-panel profile-card"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/hackerrank.svg"
+              alt="HackerRank"
+            />
             <div class="profile-info">
               <h4>HackerRank</h4>
               <p>ks7186</p>
@@ -667,7 +1230,7 @@
     <!-- Contact Section -->
     <section id="contact">
       <div class="skeuo-terminal contact-box" data-aos="zoom-in">
-        <div class="skeuo-header" style="width:100%;">
+        <div class="skeuo-header" style="width: 100%">
           <div class="skeuo-dots">
             <span class="skeuo-dot red"></span>
             <span class="skeuo-dot yellow"></span>
@@ -675,20 +1238,27 @@
           </div>
           <span class="skeuo-title">contact_connection.sh</span>
         </div>
-        
+
         <h2 class="contact-headline">Let’s Build High-Impact Systems</h2>
         <p class="contact-subtext">
-          Whether you're interested in Agentic AI workflows, FastAPI backends, or technical collaboration — feel free to reach out.
+          Whether you're interested in Agentic AI workflows, FastAPI backends,
+          or technical collaboration — feel free to reach out.
         </p>
 
         <div class="contact-buttons">
-          <button onclick="copyEmail()" class="neu-btn">
-            Copy Email
-          </button>
-          <a href="https://www.linkedin.com/in/keerthi-raj-s-74a8a824b/" target="_blank" class="neu-btn secondary">
+          <button onclick="copyEmail()" class="neu-btn">Copy Email</button>
+          <a
+            href="https://www.linkedin.com/in/keerthi-raj-s-74a8a824b/"
+            target="_blank"
+            class="neu-btn secondary"
+          >
             LinkedIn
           </a>
-          <a href="https://github.com/keerthirajsivashankar" target="_blank" class="neu-btn secondary">
+          <a
+            href="https://github.com/keerthirajsivashankar"
+            target="_blank"
+            class="neu-btn secondary"
+          >
             GitHub
           </a>
         </div>
@@ -699,8 +1269,11 @@
     <footer class="footer">
       <div class="footer-content">
         <div>
-          <h3 style="color:var(--text-main);">Keerthi Raj S.</h3>
-          <p>Software Development Engineer @ Prodapt | B.Tech IT (SRM IST, 2022–2026)</p>
+          <h3 style="color: var(--text-main)">Keerthi Raj S.</h3>
+          <p>
+            Software Development Engineer @ Prodapt | B.Tech IT (SRM IST,
+            2022–2026)
+          </p>
         </div>
         <div>
           <p>&copy; 2026 Keerthi Raj. Hosted on GitHub Pages.</p>
@@ -711,24 +1284,29 @@
     <!-- Floating Quick-Action Recruiter Bar -->
     <div class="floating-action-bar">
       <a href="KEERTHI RAJ S_Doc.pdf" download class="floating-btn primary">
-        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        <svg class="svg-icon" viewBox="0 0 24 24">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+        </svg>
         Resume PDF
       </a>
       <button onclick="copyEmail()" class="floating-btn">
-        <svg class="svg-icon accent-orange" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <svg class="svg-icon accent-teal" viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+          />
+        </svg>
         Copy Email
       </button>
     </div>
 
-    <!-- Scripts (v2.2 Cache Buster) -->
-    <script src="script.js?v=2.2"></script>
+    <!-- Scripts (v3.0 Cache Buster) -->
+    <script src="script.js?v=3.0"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         once: true,
-        duration: 800
+        duration: 800,
       });
     </script>
   </body>
 </html>
-
